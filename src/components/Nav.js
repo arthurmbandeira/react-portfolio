@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { FormattedMessage } from "react-intl"
 import '../scss/Nav.scss';
 
 class Nav extends Component {
@@ -6,11 +7,10 @@ class Nav extends Component {
     return (
       <nav>
           <a href="#">+</a>
-          {/* <a href="#"><Trans>artigos</Trans></a>
-          <a href="#"><Trans>portfolio</Trans></a>
-          <a href="#"><Trans>contato</Trans></a> */}
-          <a href="#">portfolio</a>
-          <a href="#">contato</a>
+          <a href="#"><FormattedMessage id="menu-profile" /></a>
+          <a href="#"><FormattedMessage id="menu-articles" /></a>
+          <a href="#"><FormattedMessage id="menu-portfolio" /></a>
+          <a href="#"><FormattedMessage id="menu-contact" /></a>
       </nav>
     )
   }
