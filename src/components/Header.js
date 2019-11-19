@@ -1,13 +1,34 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Nav from './Nav';
-import '../scss/Header.scss';
 import { injectIntl } from "react-intl";
+import styled from "styled-components";
 
+const HeaderStyle = styled.header`
+  font-family: ${props => props.theme.ffAnonymous};
 
-function HeaderIntl(setLanguage) {
+  .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid ${props => props.theme.gray2};
+      padding: 10px 0;
+  }
+
+  .site-title {
+      display: flex;
+      align-items: center;
+      color: ${props => props.theme.gray1};
+      h1 {
+          font-size: 28px;
+          margin: 5px 0 5px 10px;
+      }
+  }
+`;
+
+function HeaderIntl(props) {
   return (
-    <header>
+    <HeaderStyle>
       <div className="container container-small">
         <div className="header-content">
           <a href="/">
@@ -16,10 +37,10 @@ function HeaderIntl(setLanguage) {
               <h1>Arthur Bandeira</h1>
             </div>
           </a>
-          <Nav />
+          <Nav switchTheme={props.switchTheme} />
         </div>
       </div>
-    </header>
+    </HeaderStyle>
   );
 }
 

@@ -2,5 +2,7 @@
     "menu-contact": "Contato",
     "menu-portfolio": "Portfólio",
     "menu-articles": "Artigos",
-    "menu-profile": "Perfil"
+    "menu-profile": "Perfil",
+    "dark-mode": "Tema Escuro",
+    "light-mode": "Tema Claro"
 }
