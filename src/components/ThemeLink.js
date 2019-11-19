@@ -6,6 +6,7 @@ import { injectIntl } from "react-intl";
 const LinkStyled = styled.a`
   cursor: pointer;
   transition: display ease .3s;
+  margin-left: 12px;
 `;
 
 class ThemeLink extends Component {

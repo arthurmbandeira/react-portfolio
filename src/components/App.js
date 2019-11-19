@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faCode, faLanguage, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
+import { faCode, faMoon, faSun, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import Header from './Header';
+import supportedLanguages from './supportedLanguages';
 import { BrowserRouter } from 'react-router-dom';
 import { IntlProvider } from 'react-intl';
 import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
 
-library.add(faCode, faLanguage, faMoon, faSun)
+library.add(faCode, faMoon, faSun, faChevronDown)
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700|Montserrat&display=swap');
@@ -86,7 +87,7 @@ const IntlApp = function() {
   const [locale, setLocale] = useState('pt');
 
   useEffect(() => {
-    const supportedLanguages = { pt: 'pt', 'pt-BR': 'pt', en: 'en', fr: 'fr' };
+    
     const language = navigator.language;
     const th = 'main';
     let locale = supportedLanguages[language] || 'pt';

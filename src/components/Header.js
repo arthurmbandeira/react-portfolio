@@ -37,7 +37,7 @@ function HeaderIntl(props) {
               <h1>Arthur Bandeira</h1>
             </div>
           </a>
-          <Nav switchTheme={props.switchTheme} />
+          <Nav switchTheme={props.switchTheme} setLanguage={props.setLanguage} />
         </div>
       </div>
     </HeaderStyle>
