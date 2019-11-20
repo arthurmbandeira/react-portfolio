@@ -63,13 +63,6 @@ const AppContainer = styled.div`
   text-align: center;
 `;
 
-// const theme = {
-//   "ffAnonymous": "'Anonymous Pro', monospace;",
-//   "ffMontserrat": "'Montserrat', sans-serif;",
-//   "gray1": "#404040",
-//   "gray2": "#828282",
-// }
-
 function App(props) {
   return (
     <ThemeProvider theme={props.theme}>
