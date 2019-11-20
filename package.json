@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": false,
   "license": "Unlicense",
-  "homepage": "https://arthurmbandeira.github.io/react-portfolio",
+  "homepage": "https://arthurmbandeira.js.org/react-portfolio",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-solid-svg-icons": "^5.11.2",

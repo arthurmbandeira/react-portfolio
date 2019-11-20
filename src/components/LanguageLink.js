@@ -2,8 +2,8 @@ import React, { useState, useRef } from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { injectIntl } from "react-intl";
-import supportedLanguages from "./supportedLanguages";
-import useOuterClickNotifier from "./useOuterClickNotifier";
+import supportedLanguages from "./helpers/supportedLanguages";
+import useOuterClickNotifier from "./helpers/useOuterClickNotifier";
 
 const LinkStyled = styled.a`
   cursor: pointer;
@@ -14,7 +14,7 @@ const LinkStyled = styled.a`
     text-decoration: none;
   }
   svg {
-    margin-left: 5px;
+    margin-left: 3px;
   }
 `;
 
