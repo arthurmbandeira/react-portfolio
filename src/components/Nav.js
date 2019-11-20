@@ -4,6 +4,13 @@ import styled from "styled-components";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ThemeLink  from "./ThemeLink";
 import LanguageLink  from "./LanguageLink";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import MoreLink from "./MoreLink";
 
 const NavStyled = styled.nav`
   display: flex;
@@ -15,7 +22,7 @@ const NavStyled = styled.nav`
   }
 `;
 
-const LinkStyled = styled.a`
+const LinkStyled = styled(Link)`
   text-transform: lowercase;
   margin-left: 12px;
   &:hover {
@@ -31,11 +38,10 @@ class Nav extends Component {
   render() {
     return (
       <NavStyled>
-        <LinkStyled href="">+</LinkStyled>
-        <LinkStyled href=""><FormattedMessage id="menu-profile" /></LinkStyled>
-        {/* <LinkStyled href=""><a href=""><FormattedMessage id="menu-articles" /></a></LinkStyled> */}
-        <LinkStyled href=""><a href=""><FormattedMessage id="menu-portfolio" /></a></LinkStyled>
-        <LinkStyled href=""><a href=""><FormattedMessage id="menu-contact" /></a></LinkStyled>
+        <MoreLink />
+        <LinkStyled to="/perfil"><FormattedMessage id="menu-profile" /></LinkStyled>
+        <LinkStyled to="/portfolio"><FormattedMessage id="menu-portfolio" /></LinkStyled>
+        <LinkStyled to="/contato"><FormattedMessage id="menu-contact" /></LinkStyled>
         <LanguageLink setLanguage={this.props.setLanguage} />
         <ThemeLink switchTheme={this.props.switchTheme} />
       </NavStyled>

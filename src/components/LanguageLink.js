@@ -1,8 +1,9 @@
-import React, { Component } from "react";
+import React, { useState, useRef } from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { injectIntl } from "react-intl";
 import supportedLanguages from "./supportedLanguages";
+import useOuterClickNotifier from "./useOuterClickNotifier";
 
 const LinkStyled = styled.a`
   cursor: pointer;
@@ -24,24 +25,21 @@ const Dropdown = styled.div`
   left: -6px;
   background-color: ${props => props.theme.bg};
   border: 1px solid transparent;
-  border-top-color: transparent;
+  border-color: ${props => props.theme.gray2};
   padding: 0 5px;
-  height: 0;
-  /* transform: scale(0); */
+  max-height: 0;
   top: 20px;
   overflow: hidden;
-  /* visibility: hidden; */
-  transition: all ease .5s;
-
+  transition: all ease-out .5s;
+  visibility: hidden;
+  
   &.show {
-    border-color: ${props => props.theme.gray2};
-    height: 77px;
-    /* visibility: visible; */
-    /* transition: all ease 1s; */
-    /* transform: scale(1); */
+    visibility: visible;
+    max-height: 200px;
+    transition: all ease-in .5s;
   }
 
-  a {
+  div {
     display: block;
     padding: 4px 0;
     border-bottom: 1px solid ${props => props.theme.gray2};
@@ -51,20 +49,14 @@ const Dropdown = styled.div`
   }
 `;
 
-class LanguageLink extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { showLanguages: false };
-    this.handleClick = this.handleClick.bind(this);
+const LanguageLink = (props) => {
+  const [showLanguages, setShowLanguages] = useState(false);
+
+  const handleClick = () => {
+    setShowLanguages(!showLanguages);
   }
 
-  handleClick() {
-    this.setState(state => ({
-      showLanguages: !state.showLanguages
-    }));
-  }
-
-  getLanguageTitle(locale) {
+  const getLanguageTitle = (locale) => {
     switch (locale) {
       case 'pt':
         return 'Português';
@@ -77,18 +69,23 @@ class LanguageLink extends Component {
     }
   }
 
-  render() {
-    const { intl } = this.props;
-    return (
-      <LinkStyled onClick={this.handleClick}>
-        {intl.locale}
-        <FontAwesomeIcon icon={"chevron-down"} size="xs" />
-        <Dropdown className={this.state.showLanguages ? 'show' : ''}>
-          {Object.keys(supportedLanguages).map((key) => <a onClick={() => {this.props.setLanguage(key)}} title={this.getLanguageTitle(key)}>{key}</a> )}
-        </Dropdown>
-      </LinkStyled>
-    )
-  }
+  const { intl } = props;
+  const innerRef = useRef(null);
+
+  useOuterClickNotifier(
+    e => setShowLanguages(false),
+    innerRef
+  );
+
+  return (
+    <LinkStyled onClick={handleClick} ref={innerRef}>
+      {intl.locale}
+      <FontAwesomeIcon icon={"chevron-down"} size="xs" />
+      <Dropdown className={showLanguages ? 'show' : ''}>
+        {Object.keys(supportedLanguages).map((key, i) => <div key={i} onClick={() => {props.setLanguage(key)}} title={getLanguageTitle(key)}>{key}</div> )}
+      </Dropdown>
+    </LinkStyled>
+  )
 }
 
 export default injectIntl(LanguageLink);

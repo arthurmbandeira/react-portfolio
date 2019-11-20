@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { injectIntl } from "react-intl";
@@ -9,29 +9,21 @@ const LinkStyled = styled.a`
   margin-left: 12px;
 `;
 
-class ThemeLink extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { isDarkMode: true };
+const ThemeLink = (props) => {
 
-    this.handleClick = this.handleClick.bind(this);
+  const [isDarkMode, setDarkMode] = useState(true);
+
+  const handleClick = () => {
+    setDarkMode(!isDarkMode);
+    props.switchTheme(isDarkMode ? 'dark' : 'main');
   }
 
-  handleClick() {
-    this.setState(state => ({
-      isDarkMode: !state.isDarkMode
-    }));
-    this.props.switchTheme(this.state.isDarkMode ? 'dark' : 'main');
-  }
-
-  render() {
-    const { intl } = this.props;
-    return (
-      <LinkStyled onClick={this.handleClick} title={this.state.isDarkMode ? intl.formatMessage({ id: 'dark-mode' }) : intl.formatMessage({ id: 'light-mode' })}>
-          <FontAwesomeIcon icon={this.state.isDarkMode ? 'moon' : 'sun'} />
-      </LinkStyled>
-    )
-  }
+  const { intl } = props;
+  return (
+    <LinkStyled onClick={handleClick} title={isDarkMode ? intl.formatMessage({ id: 'dark-mode' }) : intl.formatMessage({ id: 'light-mode' })}>
+      <FontAwesomeIcon icon={isDarkMode ? 'moon' : 'sun'} />
+    </LinkStyled>
+  )
 }
 
 export default injectIntl(ThemeLink);
