@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "764e0b42400f35b6d8fbcf5ac1147b37",
+    "revision": "9a6467e4e3f96af284e688c6fa91c465",
     "url": "https://arthurmbandeira.js.org/react-portfolio/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://arthurmbandeira.js.org/react-portfolio/static/js/2.34d63837.chunk.js"
   },
   {
-    "revision": "21f7a8fed2bf65a1d5e2",
-    "url": "https://arthurmbandeira.js.org/react-portfolio/static/js/main.c4784b8b.chunk.js"
+    "revision": "6ffba20635015fb447b1",
+    "url": "https://arthurmbandeira.js.org/react-portfolio/static/js/main.1f7644f1.chunk.js"
   },
   {
     "revision": "b7f36e557f4e7d7341e7",
