@@ -1,7 +1,8 @@
 {
-    "menu-contact": "",
-    "menu-portfolio": "",
-    "menu-articles": "",
-    "menu-profile": "",
-    "simple": "Fr"
+    "menu-contact": "Contact",
+    "menu-portfolio": "Portefeuille",
+    "menu-articles": "Articles",
+    "menu-profile": "Profil",
+    "dark-mode": "Mode Sombre",
+    "light-mode": "Mode Clair"
 }
