@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.js": "https://arthurmbandeira.github.io/react-portfolio/static/js/main.91b5d911.chunk.js",
-    "main.js.map": "https://arthurmbandeira.github.io/react-portfolio/static/js/main.91b5d911.chunk.js.map",
-    "runtime-main.js": "https://arthurmbandeira.github.io/react-portfolio/static/js/runtime-main.dad2b7b9.js",
-    "runtime-main.js.map": "https://arthurmbandeira.github.io/react-portfolio/static/js/runtime-main.dad2b7b9.js.map",
-    "static/js/2.cc61beb2.chunk.js": "https://arthurmbandeira.github.io/react-portfolio/static/js/2.cc61beb2.chunk.js",
-    "static/js/2.cc61beb2.chunk.js.map": "https://arthurmbandeira.github.io/react-portfolio/static/js/2.cc61beb2.chunk.js.map",
-    "index.html": "https://arthurmbandeira.github.io/react-portfolio/index.html",
-    "precache-manifest.96db7be328914feadd80a0ca4f64e04d.js": "https://arthurmbandeira.github.io/react-portfolio/precache-manifest.96db7be328914feadd80a0ca4f64e04d.js",
-    "service-worker.js": "https://arthurmbandeira.github.io/react-portfolio/service-worker.js"
+    "main.js": "https://arthurmbandeira.js.org/react-portfolio/static/js/main.c4784b8b.chunk.js",
+    "main.js.map": "https://arthurmbandeira.js.org/react-portfolio/static/js/main.c4784b8b.chunk.js.map",
+    "runtime-main.js": "https://arthurmbandeira.js.org/react-portfolio/static/js/runtime-main.6fc6dc9d.js",
+    "runtime-main.js.map": "https://arthurmbandeira.js.org/react-portfolio/static/js/runtime-main.6fc6dc9d.js.map",
+    "static/js/2.34d63837.chunk.js": "https://arthurmbandeira.js.org/react-portfolio/static/js/2.34d63837.chunk.js",
+    "static/js/2.34d63837.chunk.js.map": "https://arthurmbandeira.js.org/react-portfolio/static/js/2.34d63837.chunk.js.map",
+    "index.html": "https://arthurmbandeira.js.org/react-portfolio/index.html",
+    "precache-manifest.6dd185eb75fb1567c0b9e59836dc4e1d.js": "https://arthurmbandeira.js.org/react-portfolio/precache-manifest.6dd185eb75fb1567c0b9e59836dc4e1d.js",
+    "service-worker.js": "https://arthurmbandeira.js.org/react-portfolio/service-worker.js"
   },
   "entrypoints": [
-    "static/js/runtime-main.dad2b7b9.js",
-    "static/js/2.cc61beb2.chunk.js",
-    "static/js/main.91b5d911.chunk.js"
+    "static/js/runtime-main.6fc6dc9d.js",
+    "static/js/2.34d63837.chunk.js",
+    "static/js/main.c4784b8b.chunk.js"
   ]
 }
