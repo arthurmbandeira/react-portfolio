@@ -85,24 +85,24 @@ const IntlApp = function() {
     const th = 'main';
     let locale = supportedLanguages[language] || 'pt';
 
-    fetch(`/lang/${locale}.json`).then(async messages => {
+    fetch(`lang/${locale}.json`).then(async messages => {
       setLocale(locale);
       setMessages(await messages.json());
     });
 
-    fetch(`/theme/${th}.json`).then(async theme => {
+    fetch(`theme/${th}.json`).then(async theme => {
       setTheme(await theme.json());
     });
   }, []);
 
   const setLanguage = async (locale) => {
-    const messages = await (await fetch(`/lang/${locale}.json`)).json();
+    const messages = await (await fetch(`lang/${locale}.json`)).json();
     setLocale(locale);
     setMessages(messages);
   };
 
   const switchTheme = async (th) => {
-    const theme = await (await fetch(`/theme/${th}.json`)).json();
+    const theme = await (await fetch(`theme/${th}.json`)).json();
     setTheme(theme);
   };
 
