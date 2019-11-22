@@ -32,6 +32,7 @@ const Dropdown = styled.div`
   overflow: hidden;
   transition: all ease-out .5s;
   visibility: hidden;
+  z-index: 1000;
   
   &.show {
     visibility: visible;

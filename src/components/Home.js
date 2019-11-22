@@ -6,6 +6,7 @@ import Container from "./layout/Container";
 import Row from "./layout/Row";
 import Col from "./layout/Col";
 import SectionTitle from "./SectionTitle";
+import YearSection from "./YearSection";
 
 const HomeStyle = styled.main`
   font-family: ${props => props.theme.ffMontserrat};
@@ -20,9 +21,9 @@ function Home(props) {
           <Col></Col>
           <Col></Col>
         </Row>
-        <Row>
-          <SectionTitle title={intl.formatMessage({id: 'resume'})} />
-        </Row>
+        <SectionTitle title={intl.formatMessage({id: 'experiences'})} />
+        <YearSection year="2019">
+        </YearSection>
       </Container>
     </HomeStyle>
   );

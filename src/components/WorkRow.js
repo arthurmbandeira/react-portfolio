@@ -13,7 +13,7 @@ const Title = styled.h2`
   text-align: left;
 `;
 
-const SectionTitle = (props) => {
+const WorkRow = (props) => {
   return (
     <Row>
       <Col>
@@ -23,4 +23,4 @@ const SectionTitle = (props) => {
   );
 }
 
-export default SectionTitle;
+export default WorkRow;
