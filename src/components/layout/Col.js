@@ -15,7 +15,7 @@ const ColStyle = styled.div`
 
 const Col = (props) => {
   return (
-    <ColStyle>
+    <ColStyle className={props.classes}>
       {props.children}
     </ColStyle>
   );

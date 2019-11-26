@@ -5,5 +5,31 @@
     "menu-profile": "Perfil",
     "dark-mode": "Modo Escuro",
     "light-mode": "Modo Claro",
-    "experiences": "Experiências"
+    "experiences": "Experiências",
+    "work": {
+        "name": "Trabalho",
+        "contents": [
+            {
+                "role": "Desenvolvedor Full-Stack",
+                "company": "Objective Solutions",
+                "start": "2019",
+                "end": "",
+                "description": " "
+            }, {
+                "role": "Desenvolvedor Full-Stack",
+                "company": "Escada Digital",
+                "start": "2017",
+                "end": "2019",
+                "description": " "
+            }
+        ]
+    },
+    "internship": {
+        "name": "Estágio Profissional",
+        "contents": []
+    },
+    "college-projects": {
+        "name": "Projetos de Graduação",
+        "contents": []
+    }
 }

@@ -9,7 +9,7 @@ const RowStyle = styled.div`
 
 const Row = (props) => {
   return (
-    <RowStyle>
+    <RowStyle className={props.classes}>
       {props.children}
     </RowStyle>
   );
