@@ -6,30 +6,61 @@
     "dark-mode": "Modo Escuro",
     "light-mode": "Modo Claro",
     "experiences": "Experiências",
+    "made-with": "Feito com",
     "work": {
         "name": "Trabalho",
-        "contents": [
-            {
+        "contents": {
+            "objective": {
                 "role": "Desenvolvedor Full-Stack",
                 "company": "Objective Solutions",
+                "url": "https://objective.com.br",
                 "start": "2019",
                 "end": "",
                 "description": " "
-            }, {
+            },
+            "escada": {
                 "role": "Desenvolvedor Full-Stack",
                 "company": "Escada Digital",
+                "url": "https://escadadigital.com.br",
                 "start": "2017",
                 "end": "2019",
                 "description": " "
             }
-        ]
+        }
     },
     "internship": {
         "name": "Estágio Profissional",
-        "contents": []
+        "contents": {
+            "coderun": {
+                "role": "Desenvolvedor Full-Stack",
+                "company": "Coderun",
+                "url": "https://coderun.com.br",
+                "start": "2015",
+                "end": "2017",
+                "description": " "
+            }
+        }
     },
     "college-projects": {
         "name": "Projetos de Graduação",
-        "contents": []
-    }
+        "contents": {
+            "coderun": {
+                "role": "Desenvolvedor",
+                "company": "Fortalecimento da competitividade das micro e pequenas empresas através do uso das Tecnologias de Informação e Comunicação",
+                "url": " ",
+                "start": "2015",
+                "end": "2016",
+                "description": " "
+            },
+            "mudi": {
+                "role": "Monitor",
+                "company": "Inclusão Digital",
+                "url": " ",
+                "start": "2012",
+                "end": "2015",
+                "description": " "
+            }
+        }
+    },
+    "about": "Sou o Arthur e trabalho como Desenvolvedor.\nSou graduado pela Universidade Estadual de Maringá em Ciência da Computação e, no momento, curso Mestrado nas áreas de Inteligência Computacional e Processamento de Imagens.\n"
 }

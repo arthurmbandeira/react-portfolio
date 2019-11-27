@@ -1,54 +1,17 @@
 import React, { useState, useEffect } from 'react';
+import styled, { ThemeProvider } from "styled-components";
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faCode, faMoon, faSun, faChevronDown, faBolt, faPlusSquare } from '@fortawesome/free-solid-svg-icons';
+import { faCode, faMoon, faSun, faChevronDown, faBolt, faPlusSquare, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { IntlProvider } from 'react-intl';
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { flattenMessages } from './helpers/flattenMessages';
+import supportedLanguages from './helpers/supportedLanguages';
 import Header from './Header';
 import Home from './Home';
-import supportedLanguages from './helpers/supportedLanguages';
-import { IntlProvider } from 'react-intl';
-import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
-import {
-  BrowserRouter,
-  Switch,
-  Route
-} from "react-router-dom";
-import { flattenMessages } from './helpers/flattenMessages';
+import GlobalStyle from './layout/GlobalStyle';
+import Footer from './Footer';
 
-library.add(faCode, faMoon, faSun, faChevronDown, faBolt, faPlusSquare)
-
-const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700|Montserrat&display=swap');
-
-  *, ::after, ::before {
-    box-sizing: border-box;
-  }
-
-  body {
-    font-family: ${props => props.theme.ffMontserrat};
-    background-color: ${props => props.theme.bg};
-    margin: 0;
-    transition: background-color ease .3s;
-  }
-
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-
-  .d-flex {
-    display: flex;
-  }
-  .w-auto {
-    width: auto;
-    flex-grow: 0;
-    flex-basis: auto;
-  }
-  .justify-content-between {
-    justify-content: space-between;
-  }
-  .align-items-center {
-    align-items: center;
-  }
-`;
+library.add(faCode, faMoon, faSun, faChevronDown, faBolt, faPlusSquare, faHeart)
 
 const AppContainer = styled.div`
   text-align: center;
@@ -65,6 +28,7 @@ const App = (props) => {
             <Home setLanguage={props.setLanguage} switchTheme={props.switchTheme} />
           </Route>
         </Switch>
+        <Footer />
       </AppContainer>
     </ThemeProvider>
   )

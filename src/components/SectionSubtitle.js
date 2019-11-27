@@ -4,11 +4,11 @@ import Row from "./layout/Row";
 import Col from "./layout/Col";
 
 const Title = styled.h3`
-  margin: 20px 0 10px;
+  margin: 20px 0 0;
   padding: 0 0 5px;
   color: ${props => props.theme.gray1};
   font-family: ${props => props.theme.ffAnonymous};
-  font-size: 22px;
+  font-size: 21px;
   text-align: left;
 `;
 
