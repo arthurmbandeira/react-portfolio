@@ -8,13 +8,19 @@ import { flattenMessages } from './helpers/flattenMessages';
 import supportedLanguages from './helpers/supportedLanguages';
 import Header from './Header';
 import Home from './Home';
-import GlobalStyle from './layout/GlobalStyle';
+import Portfolio from './Portfolio';
+import Contact from './Contact';
 import Footer from './Footer';
+import GlobalStyle from './layout/GlobalStyle';
 
 library.add(faCode, faMoon, faSun, faChevronDown, faBolt, faPlusSquare, faHeart)
 
 const AppContainer = styled.div`
   text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 const App = (props) => {
@@ -24,6 +30,12 @@ const App = (props) => {
         <GlobalStyle />
         <Header setLanguage={props.setLanguage} switchTheme={props.switchTheme} />
         <Switch>
+          <Route path="/portfolio">
+            <Portfolio setLanguage={props.setLanguage} switchTheme={props.switchTheme} />
+          </Route>
+          <Route path="/contato">
+            <Contact setLanguage={props.setLanguage} switchTheme={props.switchTheme} />
+          </Route>
           <Route path="/">
             <Home setLanguage={props.setLanguage} switchTheme={props.switchTheme} />
           </Route>

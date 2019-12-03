@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Container from "./layout/Container";
 import Row from "./layout/Row";
 import Col from "./layout/Col";
+import Main from "./layout/Main";
 import SectionTitle from "./SectionTitle";
 import WorkRow from "./WorkRow";
 import SectionSubtitle from "./SectionSubtitle";
@@ -11,11 +12,11 @@ import ProfilePic from "./ProfilePic";
 
 const me = 'img/me.jpeg';
 
-const HomeStyle = styled.main`
+const HomeStyle = styled(Main)`
   font-family: ${props => props.theme.ffMontserrat};
 `;
 
-const RoundedBox = styled.div`
+const SquareBox = styled.div`
   background-color: ${props => props.theme.gray3};
   color: ${props => props.theme.gray1};
   text-align: left;
@@ -43,10 +44,10 @@ const Home = (props) => {
       <Container small>
         <Row>
           <Col>
-            <RoundedBox height="200px">
+            <SquareBox height="200px">
               <h2>Oi</h2>
               {about.map((line, key) => <p key={key}>{line}</p>)}
-            </RoundedBox>
+            </SquareBox>
           </Col>
           <Col classes="w-auto">
             <ProfilePic pic={me} size="200px" />

@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Row from "./layout/Row";
-import Col from "./layout/Col";
 
 const ProfilePicStyle = styled.div`
   border: 3px solid ${props => props.theme.gray1};

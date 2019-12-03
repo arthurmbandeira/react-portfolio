@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import ThemeLink from "./ThemeLink";
 import LanguageLink from "./LanguageLink";
-import MoreLink from "./MoreLink";
 
 const MenuStyled = styled.nav`
   display: flex;
@@ -30,7 +29,7 @@ const LinkStyled = styled(Link)`
 const Menu = (props) => {
   return (
     <MenuStyled>
-      <MoreLink />
+      {/* <MoreLink /> */}
       <LinkStyled to="/perfil"><FormattedMessage id="menu-profile" /></LinkStyled>
       <LinkStyled to="/portfolio"><FormattedMessage id="menu-portfolio" /></LinkStyled>
       <LinkStyled to="/contato"><FormattedMessage id="menu-contact" /></LinkStyled>

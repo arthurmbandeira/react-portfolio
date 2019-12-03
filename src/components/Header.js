@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Nav from './Menu';
+import Menu from './Menu';
 import { injectIntl } from "react-intl";
 import styled from "styled-components";
 import Container from "./layout/Container";
@@ -39,7 +39,7 @@ const Header = (props) => {
               <h1>Arthur Bandeira</h1>
             </SiteTitle>
           </a>
-          <Nav switchTheme={props.switchTheme} setLanguage={props.setLanguage} />
+          <Menu switchTheme={props.switchTheme} setLanguage={props.setLanguage} />
         </HeaderContent>
       </Container>
     </HeaderStyle>
