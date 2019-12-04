@@ -12,6 +12,7 @@ import Portfolio from './Portfolio';
 import Contact from './Contact';
 import Footer from './Footer';
 import GlobalStyle from './layout/GlobalStyle';
+import Profile from './Profile';
 
 library.add(faCode, faMoon, faSun, faChevronDown, faBolt, faPlusSquare, faHeart)
 
@@ -30,6 +31,9 @@ const App = (props) => {
         <GlobalStyle />
         <Header setLanguage={props.setLanguage} switchTheme={props.switchTheme} />
         <Switch>
+          <Route path="/perfil">
+            <Profile setLanguage={props.setLanguage} switchTheme={props.switchTheme} />
+          </Route>
           <Route path="/portfolio">
             <Portfolio setLanguage={props.setLanguage} switchTheme={props.switchTheme} />
           </Route>
