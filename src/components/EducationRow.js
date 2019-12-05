@@ -2,11 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import Row from "./layout/Row";
 import Col from "./layout/Col";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { injectIntl } from "react-intl";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import BoltLink from "./BoltLink";
 
-const WorkRowStyled = styled.div`
+const EducationRowStyled = styled.div`
   margin: 5px 0 20px;
   padding-bottom: 5px;
   text-align: left;
@@ -15,42 +15,43 @@ const WorkRowStyled = styled.div`
 
 const Title = styled.h3`
   margin: 0;
-  padding: 0 0 5px;
+  padding: 0 0 10px;
   color: ${props => props.theme.gray1};
   font-family: ${props => props.theme.ffAnonymous};
   font-size: 20px;
   text-align: left;
 `;
 
-const Company = styled.a`
+const Work = styled.div`
   color: ${props => props.theme.gray1};
   font-family: ${props => props.theme.ffMontserrat};
   font-size: 15px;
-  margin: 0;
+  display: flex;
+  align-items: center;
+  svg.fa-lg {
+    margin-right: 8px;
+    width: 20px;
+  }
 `;
 
-const MoreButton = styled.button`
-  margin: 0 0 0 5px;
-  cursor: pointer;
+const University = styled.div`
   color: ${props => props.theme.gray1};
-  appearance: none;
-  border: none;
-  background: none;
-  padding: 0;
-  outline: none;
-  font-size: inherit;
-  display: none;
+  font-family: ${props => props.theme.ffMontserrat};
+  font-size: 15px;
+  /* font-weight: bold; */
+  margin: 10px 0 0;
+  svg.fa-lg {
+    margin-right: 8px;
+    width: 20px;
+  }
 `;
 
-const WorkRow = (props) => {
+const EducationRow = (props) => {
   return (
-    <WorkRowStyled>
+    <EducationRowStyled>
       <Row classes="justify-content-between align-items-center">
         <Col classes="d-flex align-items-center">
           <Title>{props.title}</Title>
-          <MoreButton>
-            <FontAwesomeIcon icon="plus-square"/>
-          </MoreButton>
         </Col>
         <Col classes="w-auto">
           <Title>{props.start} - {props.end ? props.end : <BoltLink switchTheme={props.switchTheme} isDarkMode={props.isDarkMode} setDarkMode={props.setDarkMode} />}</Title>
@@ -58,13 +59,22 @@ const WorkRow = (props) => {
       </Row>
       <Row>
         <Col>
-          <Company href={props.companyUrl} target="_blank" rel="noopener noreferrer">
-              {props.company}
-          </Company>
+          <Work>
+            <FontAwesomeIcon icon="book" size="lg" />
+            {props.work}
+          </Work>
         </Col>
       </Row>
-    </WorkRowStyled>
+      <Row>
+        <Col>
+          <University>
+            <FontAwesomeIcon icon="university" size="lg" />
+            {props.university}
+          </University>
+        </Col>
+      </Row>
+    </EducationRowStyled>
   );
 }
 
-export default injectIntl(WorkRow);
+export default injectIntl(EducationRow);

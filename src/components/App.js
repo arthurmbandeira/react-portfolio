@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled, { ThemeProvider } from "styled-components";
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faCode, faMoon, faSun, faChevronDown, faBolt, faPlusSquare, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faCode, faMoon, faSun, faChevronDown, faBolt, faPlusSquare, faHeart, faUniversity, faBook } from '@fortawesome/free-solid-svg-icons';
 import { IntlProvider } from 'react-intl';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { flattenMessages } from './helpers/flattenMessages';
@@ -14,7 +14,7 @@ import Footer from './Footer';
 import GlobalStyle from './layout/GlobalStyle';
 import Profile from './Profile';
 
-library.add(faCode, faMoon, faSun, faChevronDown, faBolt, faPlusSquare, faHeart)
+library.add(faCode, faMoon, faSun, faChevronDown, faBolt, faPlusSquare, faHeart, faUniversity, faBook)
 
 const AppContainer = styled.div`
   text-align: center;

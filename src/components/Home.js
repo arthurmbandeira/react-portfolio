@@ -38,14 +38,32 @@ const Home = (props) => {
         
         <SectionSubtitle title={intl.formatMessage({id: 'work.name'})} />
         
-        <WorkRow title={intl.formatMessage({id: 'work.contents.objective.role'})} company={intl.formatMessage({id: 'work.contents.objective.company'})} companyUrl={intl.formatMessage({id: 'work.contents.objective.url'})} start={intl.formatMessage({id: 'work.contents.objective.start'})} description={intl.formatMessage({id: 'work.contents.objective.description'})} switchTheme={props.switchTheme} isDarkMode={props.isDarkMode} setDarkMode={props.setDarkMode} />
+        <WorkRow title={intl.formatMessage({id: 'work.contents.objective.role'})}
+                 company={intl.formatMessage({id: 'work.contents.objective.company'})}
+                 companyUrl={intl.formatMessage({id: 'work.contents.objective.url'})}
+                 start={intl.formatMessage({id: 'work.contents.objective.start'})}
+                 description={intl.formatMessage({id: 'work.contents.objective.description'})}
+                 switchTheme={props.switchTheme}
+                 isDarkMode={props.isDarkMode}
+                 setDarkMode={props.setDarkMode} />
 
-        <WorkRow title={intl.formatMessage({id: 'work.contents.escada.role'})} company={intl.formatMessage({id: 'work.contents.escada.company'})} companyUrl={intl.formatMessage({id: 'work.contents.escada.url'})} start={intl.formatMessage({id: 'work.contents.escada.start'})} end={intl.formatMessage({id: 'work.contents.escada.end'})} description={intl.formatMessage({id: 'work.contents.escada.description'})} switchTheme={props.switchTheme} />
+        <WorkRow title={intl.formatMessage({id: 'work.contents.escada.role'})}
+                 company={intl.formatMessage({id: 'work.contents.escada.company'})}
+                 companyUrl={intl.formatMessage({id: 'work.contents.escada.url'})}
+                 start={intl.formatMessage({id: 'work.contents.escada.start'})}
+                 end={intl.formatMessage({id: 'work.contents.escada.end'})}
+                 description={intl.formatMessage({id: 'work.contents.escada.description'})}
+                 switchTheme={props.switchTheme} />
 
         <SectionSubtitle title={intl.formatMessage({id: 'internship.name'})} />
 
-        <WorkRow title={intl.formatMessage({id: 'internship.contents.coderun.role'})} company={intl.formatMessage({id: 'internship.contents.coderun.company'})} companyUrl={intl.formatMessage({id: 'internship.contents.coderun.url'})} start={intl.formatMessage({id: 'internship.contents.coderun.start'})} end={intl.formatMessage({id: 'internship.contents.coderun.end'})} description={intl.formatMessage({id: 'internship.contents.coderun.description'})} switchTheme={props.switchTheme} />
-
+        <WorkRow title={intl.formatMessage({id: 'internship.contents.coderun.role'})}
+                 company={intl.formatMessage({id: 'internship.contents.coderun.company'})}
+                 companyUrl={intl.formatMessage({id: 'internship.contents.coderun.url'})}
+                 start={intl.formatMessage({id: 'internship.contents.coderun.start'})}
+                 end={intl.formatMessage({id: 'internship.contents.coderun.end'})}
+                 description={intl.formatMessage({id: 'internship.contents.coderun.description'})}
+                 switchTheme={props.switchTheme} />
       </Container>
     </HomeStyle>
   );

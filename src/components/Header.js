@@ -1,13 +1,19 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Menu from './Menu';
 import { injectIntl } from "react-intl";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
+import Menu from './Menu';
 import Container from "./layout/Container";
 
 const HeaderStyle = styled.header`
   font-family: ${props => props.theme.ffAnonymous};
+  background-color: ${props => props.theme.bg};
   margin-bottom: 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  transition: background-color ease .3s;
 `;
 
 const SiteTitle = styled.div`
@@ -24,6 +30,7 @@ const HeaderContent = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-top: 1px solid transparent;
   border-bottom: 1px solid ${props => props.theme.gray2};
   padding: 10px 0;
 `;
@@ -33,12 +40,12 @@ const Header = (props) => {
     <HeaderStyle>
       <Container small>
         <HeaderContent>
-          <a href="/">
+          <Link to="/">
             <SiteTitle>
               <FontAwesomeIcon icon="code" size="lg" />
               <h1>Arthur Bandeira</h1>
             </SiteTitle>
-          </a>
+          </Link>
           <Menu switchTheme={props.switchTheme} setLanguage={props.setLanguage} />
         </HeaderContent>
       </Container>

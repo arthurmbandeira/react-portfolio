@@ -62,5 +62,26 @@
             }
         }
     },
-    "about": "Sou o Arthur e trabalho como Desenvolvedor Web.\nSou graduado pela Universidade Estadual de Maringá em Ciência da Computação e, no momento, curso Mestrado nas áreas de Inteligência Computacional e Processamento de Imagens.\n"
+    "about": "Sou o Arthur e trabalho como Desenvolvedor Web.\nSou graduado pela Universidade Estadual de Maringá em Ciência da Computação e, no momento, curso Mestrado nas áreas de Inteligência Computacional e Processamento de Imagens.\n",
+    "education": {
+        "name": "Educação",
+        "contents": {
+            "masters": {
+                "title": "Mestrado em Ciência da Computação",
+                "university": "Universidade Estadual de Maringá",
+                "work": "Segmentação de Objetos em Sequências de Imagens por Segmentação Hierárquica e Análise de Texturas",
+                "assignment": "Dissertação",
+                "start": "2018",
+                "end": ""
+            },
+            "graduation": {
+                "title": "Bacharelado em Ciência da Computação",
+                "university": "Universidade Estadual de Maringá",
+                "work": "Segmentação de Imagens por Morfologia Matemática e Colônia de Formigas Artificiais",
+                "assignment": "Trabalho de Conclusão de Curso",
+                "start": "2011",
+                "end": "2017"
+            }
+        }
+    }
 }

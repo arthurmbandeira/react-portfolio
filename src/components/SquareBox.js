@@ -8,6 +8,7 @@ const SquareBoxStyle = styled.div`
   padding: 20px 30px;
   height: ${props => props.height};
   font-family: ${props => props.theme.ffMontserrat};
+  transition: background-color ease .3s;
 
   h2 {
     font-size: 30px;
