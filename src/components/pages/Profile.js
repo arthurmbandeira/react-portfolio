@@ -1,27 +1,27 @@
 import React from "react";
 import { injectIntl } from "react-intl";
 import styled from "styled-components";
-import Container from "./layout/Container";
-import Row from "./layout/Row";
-import Col from "./layout/Col";
-import Main from "./layout/Main";
-import SectionTitle from "./SectionTitle";
-import WorkRow from "./WorkRow";
-import SectionSubtitle from "./SectionSubtitle";
-import ProfilePic from "./ProfilePic";
-import SquareBox from "./SquareBox";
+import Container from "../layout/Container";
+import Row from "../layout/Row";
+import Col from "../layout/Col";
+import Main from "../layout/Main";
+import SectionTitle from "../SectionTitle";
+import SectionSubtitle from "../SectionSubtitle";
+import SquareBox from "../SquareBox";
+import ProfilePic from "../ProfilePic";
+import EducationRow from "../EducationRow";
+import WorkRow from "../WorkRow";
 
-const me = 'img/me.jpeg';
-
-const HomeStyle = styled(Main)`
+const ProfileStyle = styled(Main)`
   font-family: ${props => props.theme.ffMontserrat};
 `;
 
-const Home = (props) => {
+const Profile = (props) => {
   const { intl } = props;
   const about = intl.formatMessage({id: 'about'}).split(/(?:\r\n|\r|\n)/g);
+  const me = 'img/me.jpeg';
   return (
-    <HomeStyle>
+    <ProfileStyle>
       <Container small>
         <Row>
           <Col>
@@ -34,6 +34,12 @@ const Home = (props) => {
             <ProfilePic pic={me} size="200px" />
           </Col>
         </Row>
+        <SectionTitle title={intl.formatMessage({id: 'education.name'})} />
+
+        <EducationRow title={intl.formatMessage({id: 'education.contents.masters.title'})} university={intl.formatMessage({id: 'education.contents.masters.university'})} work={intl.formatMessage({id: 'education.contents.masters.work'})} assignment={intl.formatMessage({id: 'education.contents.masters.assignment'})} start={intl.formatMessage({id: 'education.contents.masters.start'})} end={''} switchTheme={props.switchTheme} />
+
+        <EducationRow title={intl.formatMessage({id: 'education.contents.graduation.title'})} university={intl.formatMessage({id: 'education.contents.graduation.university'})} work={intl.formatMessage({id: 'education.contents.graduation.work'})} assignment={intl.formatMessage({id: 'education.contents.graduation.assignment'})} start={intl.formatMessage({id: 'education.contents.graduation.start'})} end={intl.formatMessage({id: 'education.contents.graduation.end'})} switchTheme={props.switchTheme} />
+
         <SectionTitle title={intl.formatMessage({id: 'experiences'})} />
         
         <SectionSubtitle title={intl.formatMessage({id: 'work.name'})} />
@@ -65,8 +71,8 @@ const Home = (props) => {
                  description={intl.formatMessage({id: 'internship.contents.coderun.description'})}
                  switchTheme={props.switchTheme} />
       </Container>
-    </HomeStyle>
+    </ProfileStyle>
   );
 }
 
-export default injectIntl(Home);
+export default injectIntl(Profile);
