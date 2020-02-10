@@ -16,7 +16,7 @@ const ColStyle = styled.div`
 `;
 
 const Col = (props) => {
-  const { justifyContent, alignItems } = props;
+  const { justifyContent, alignItems } = props;  
   return (
     <ColStyle className={props.classes} flex={{ justifyContent, alignItems }}>
       {props.children}
