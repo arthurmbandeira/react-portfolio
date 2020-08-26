@@ -1,9 +1,9 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Nav from './Menu';
+import Nav from '../Menu';
 import { injectIntl } from "react-intl";
 import styled from "styled-components";
-import Container from "./layout/Container";
+import Container from "./Container";
 
 const FooterStyle = styled.footer`
   font-family: ${props => props.theme.ffMontserrat};

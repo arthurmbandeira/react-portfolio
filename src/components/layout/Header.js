@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { injectIntl } from "react-intl";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import Menu from './Menu';
-import Container from "./layout/Container";
+import Menu from '../Menu';
+import Container from "./Container";
 
 const HeaderStyle = styled.header`
   font-family: ${props => props.theme.ffAnonymous};

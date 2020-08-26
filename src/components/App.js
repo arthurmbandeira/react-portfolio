@@ -6,13 +6,13 @@ import { IntlProvider } from 'react-intl';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { flattenMessages } from './helpers/flattenMessages';
 import supportedLanguages from './helpers/supportedLanguages';
-import Header from './Header';
-import Home from './Home';
-import Portfolio from './Portfolio';
-import Contact from './Contact';
-import Footer from './Footer';
+import Header from './layout/Header';
+import Home from './pages/Home';
+import Portfolio from './pages/Portfolio';
+import Contact from './pages/Contact';
+import Footer from './layout/Footer';
 import GlobalStyle from './layout/GlobalStyle';
-import Profile from './Profile';
+import Profile from './pages/Profile';
 
 library.add(faCode, faMoon, faSun, faChevronDown, faBolt, faPlusSquare, faHeart, faUniversity, faBook)
 

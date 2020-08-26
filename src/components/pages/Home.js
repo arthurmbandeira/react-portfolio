@@ -1,15 +1,15 @@
 import React from "react";
 import { injectIntl } from "react-intl";
 import styled from "styled-components";
-import Container from "./layout/Container";
-import Row from "./layout/Row";
-import Col from "./layout/Col";
-import Main from "./layout/Main";
-import SectionTitle from "./SectionTitle";
-import WorkRow from "./WorkRow";
-import SectionSubtitle from "./SectionSubtitle";
-import ProfilePic from "./ProfilePic";
-import SquareBox from "./SquareBox";
+import Container from "../layout/Container";
+import Row from "../layout/Row";
+import Col from "../layout/Col";
+import Main from "../layout/Main";
+import SectionTitle from "../SectionTitle";
+import WorkRow from "../WorkRow";
+import SectionSubtitle from "../SectionSubtitle";
+import ProfilePic from "../ProfilePic";
+import SquareBox from "../SquareBox";
 
 const me = 'img/me.jpeg';
 

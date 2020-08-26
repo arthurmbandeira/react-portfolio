@@ -1,16 +1,16 @@
 import React from "react";
 import { injectIntl } from "react-intl";
 import styled from "styled-components";
-import Container from "./layout/Container";
-import Row from "./layout/Row";
-import Col from "./layout/Col";
-import Main from "./layout/Main";
-import SectionTitle from "./SectionTitle";
-import SectionSubtitle from "./SectionSubtitle";
-import SquareBox from "./SquareBox";
-import ProfilePic from "./ProfilePic";
-import EducationRow from "./EducationRow";
-import WorkRow from "./WorkRow";
+import Container from "../layout/Container";
+import Row from "../layout/Row";
+import Col from "../layout/Col";
+import Main from "../layout/Main";
+import SectionTitle from "../SectionTitle";
+import SectionSubtitle from "../SectionSubtitle";
+import SquareBox from "../SquareBox";
+import ProfilePic from "../ProfilePic";
+import EducationRow from "../EducationRow";
+import WorkRow from "../WorkRow";
 
 const ProfileStyle = styled(Main)`
   font-family: ${props => props.theme.ffMontserrat};
