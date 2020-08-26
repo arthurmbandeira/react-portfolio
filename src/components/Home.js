@@ -64,6 +64,7 @@ const Home = (props) => {
                  end={intl.formatMessage({id: 'internship.contents.coderun.end'})}
                  description={intl.formatMessage({id: 'internship.contents.coderun.description'})}
                  switchTheme={props.switchTheme} />
+
       </Container>
     </HomeStyle>
   );

@@ -9,7 +9,6 @@ import Container from "./layout/Container";
 const HeaderStyle = styled.header`
   font-family: ${props => props.theme.ffAnonymous};
   background-color: ${props => props.theme.bg};
-  margin-bottom: 20px;
   position: fixed;
   width: 100%;
   z-index: 100;
@@ -33,6 +32,7 @@ const HeaderContent = styled.div`
   border-top: 1px solid transparent;
   border-bottom: 1px solid ${props => props.theme.gray2};
   padding: 10px 0;
+  margin-bottom: 20px;
 `;
 
 const Header = (props) => {

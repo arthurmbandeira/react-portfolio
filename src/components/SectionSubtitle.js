@@ -10,6 +10,7 @@ const Title = styled.h3`
   font-family: ${props => props.theme.ffAnonymous};
   font-size: 21px;
   text-align: left;
+  text-decoration: 2px underline;
 `;
 
 const SectionSubtitle = (props) => {

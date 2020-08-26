@@ -36,9 +36,21 @@ const Profile = (props) => {
         </Row>
         <SectionTitle title={intl.formatMessage({id: 'education.name'})} />
 
-        <EducationRow title={intl.formatMessage({id: 'education.contents.masters.title'})} university={intl.formatMessage({id: 'education.contents.masters.university'})} work={intl.formatMessage({id: 'education.contents.masters.work'})} assignment={intl.formatMessage({id: 'education.contents.masters.assignment'})} start={intl.formatMessage({id: 'education.contents.masters.start'})} end={''} switchTheme={props.switchTheme} />
+        <EducationRow title={intl.formatMessage({id: 'education.contents.masters.title'})} 
+                      university={intl.formatMessage({id: 'education.contents.masters.university'})} 
+                      work={intl.formatMessage({id: 'education.contents.masters.work'})} 
+                      assignment={intl.formatMessage({id: 'education.contents.masters.assignment'})} 
+                      start={intl.formatMessage({id: 'education.contents.masters.start'})} 
+                      end={''} 
+                      switchTheme={props.switchTheme} />
 
-        <EducationRow title={intl.formatMessage({id: 'education.contents.graduation.title'})} university={intl.formatMessage({id: 'education.contents.graduation.university'})} work={intl.formatMessage({id: 'education.contents.graduation.work'})} assignment={intl.formatMessage({id: 'education.contents.graduation.assignment'})} start={intl.formatMessage({id: 'education.contents.graduation.start'})} end={intl.formatMessage({id: 'education.contents.graduation.end'})} switchTheme={props.switchTheme} />
+        <EducationRow title={intl.formatMessage({id: 'education.contents.graduation.title'})} 
+                      university={intl.formatMessage({id: 'education.contents.graduation.university'})} 
+                      work={intl.formatMessage({id: 'education.contents.graduation.work'})} 
+                      assignment={intl.formatMessage({id: 'education.contents.graduation.assignment'})} 
+                      start={intl.formatMessage({id: 'education.contents.graduation.start'})} 
+                      end={intl.formatMessage({id: 'education.contents.graduation.end'})} 
+                      switchTheme={props.switchTheme} />
 
         <SectionTitle title={intl.formatMessage({id: 'experiences'})} />
         
@@ -69,6 +81,24 @@ const Profile = (props) => {
                  start={intl.formatMessage({id: 'internship.contents.coderun.start'})}
                  end={intl.formatMessage({id: 'internship.contents.coderun.end'})}
                  description={intl.formatMessage({id: 'internship.contents.coderun.description'})}
+                 switchTheme={props.switchTheme} />
+
+        <SectionSubtitle title={intl.formatMessage({id: 'college-projects.name'})} />
+
+        <WorkRow title={intl.formatMessage({id: 'college-projects.contents.coderun.role'})}
+                 company={intl.formatMessage({id: 'college-projects.contents.coderun.company'})}
+                 companyUrl={intl.formatMessage({id: 'college-projects.contents.coderun.url'})}
+                 start={intl.formatMessage({id: 'college-projects.contents.coderun.start'})}
+                 end={intl.formatMessage({id: 'college-projects.contents.coderun.end'})}
+                 description={intl.formatMessage({id: 'college-projects.contents.coderun.description'})}
+                 switchTheme={props.switchTheme} />
+
+        <WorkRow title={intl.formatMessage({id: 'college-projects.contents.mudi.role'})}
+                 company={intl.formatMessage({id: 'college-projects.contents.mudi.company'})}
+                 companyUrl={intl.formatMessage({id: 'college-projects.contents.mudi.url'})}
+                 start={intl.formatMessage({id: 'college-projects.contents.mudi.start'})}
+                 end={intl.formatMessage({id: 'college-projects.contents.mudi.end'})}
+                 description={intl.formatMessage({id: 'college-projects.contents.mudi.description'})}
                  switchTheme={props.switchTheme} />
       </Container>
     </ProfileStyle>
