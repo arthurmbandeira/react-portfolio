@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+
 const Button = styled.button`
   appearance: none;
   border: none;
@@ -12,14 +13,15 @@ const Button = styled.button`
   color: inherit;
 `;
 
-const BoltLink = (props) => {
+const BoltLink = ({ switchTheme }) => {
 
   const getRandomInt = (min, max) => {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
-  const { switchTheme } = props;
+  // const { switchTheme } = props;
+  
   const [isDarkMode, setDarkMode] = useState(false);
   const [clicks, setClicks] = useState(0);
   const [randomNum, setRandomNum] = useState(getRandomInt(3, 9));
@@ -41,7 +43,7 @@ const BoltLink = (props) => {
   }
 
   useEffect(() => {
-    switchTheme(isDarkMode ? 'dark' : 'main');
+    switchTheme(isDarkMode ? 'light' : 'dark');
   }, [isDarkMode]);
 
   

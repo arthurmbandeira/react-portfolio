@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Nav from '../Menu';
+// import Nav from '../Menu';
 import { injectIntl } from "react-intl";
 import styled from "styled-components";
 import Container from "./Container";
@@ -11,7 +11,6 @@ const FooterStyle = styled.footer`
 `;
 
 const FooterContent = styled.div`
-  /* border-top: 1px solid ${props => props.theme.gray2}; */
   padding: 10px 0;
   text-align: center;
   color: ${props => props.theme.gray1};

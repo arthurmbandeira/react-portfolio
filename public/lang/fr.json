@@ -1,8 +1,12 @@
 {
-    "menu-contact": "Contact",
     "menu-portfolio": "Portefeuille",
     "menu-articles": "Articles",
     "menu-profile": "Profil",
     "dark-mode": "Mode Sombre",
-    "light-mode": "Mode Clair"
+    "light-mode": "Mode Clair",
+    "hello": "Salut",
+    "contact": {
+        "title": "Contact",
+        "text": "Informations de contact, dêpóts, projets et articles."
+    }
 }

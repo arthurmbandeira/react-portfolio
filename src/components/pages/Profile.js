@@ -26,7 +26,7 @@ const Profile = (props) => {
         <Row>
           <Col>
             <SquareBox height="200px">
-              <h2>Oi</h2>
+              <h2>{intl.formatMessage({id: 'hello'})}</h2>
               {about.map((line, key) => <p key={key}>{line}</p>)}
             </SquareBox>
           </Col>

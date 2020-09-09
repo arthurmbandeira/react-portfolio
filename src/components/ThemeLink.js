@@ -11,11 +11,11 @@ const LinkStyled = styled.a`
 
 const ThemeLink = (props) => {
 
-  const [isDarkMode, setDarkMode] = useState(true);
+  const [isDarkMode, setDarkMode] = useState(false);
 
   const handleClick = () => {
     setDarkMode(!isDarkMode);
-    props.switchTheme(isDarkMode ? 'dark' : 'main');
+    props.switchTheme(isDarkMode ? 'dark' : 'light');
   }
 
   const { intl } = props;

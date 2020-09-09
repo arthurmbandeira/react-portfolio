@@ -1,5 +1,4 @@
 {
-    "menu-contact": "Contato",
     "menu-portfolio": "Portfólio",
     "menu-articles": "Artigos",
     "menu-profile": "Perfil",
@@ -7,11 +6,12 @@
     "light-mode": "Modo Claro",
     "experiences": "Experiências",
     "made-with": "Feito com",
+    "hello": "Oi",
     "work": {
         "name": "Trabalho",
         "contents": {
             "objective": {
-                "role": "Desenvolvedor Full-Stack",
+                "role": "Desenvolvedor",
                 "company": "Objective Solutions",
                 "url": "https://objective.com.br",
                 "start": "2019",
@@ -19,7 +19,7 @@
                 "description": " "
             },
             "escada": {
-                "role": "Desenvolvedor Full-Stack",
+                "role": "Desenvolvedor",
                 "company": "Escada Digital",
                 "url": "https://escadadigital.com.br",
                 "start": "2017",
@@ -83,5 +83,9 @@
                 "end": "2017"
             }
         }
+    },
+    "contact": {
+        "title": "Contato",
+        "text": "Informações de contato, repositórios, projetos e artigos."
     }
 }

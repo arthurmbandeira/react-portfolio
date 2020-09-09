@@ -1,20 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import styled, { ThemeProvider } from "styled-components";
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faCode, faMoon, faSun, faChevronDown, faBolt, faPlusSquare, faHeart, faUniversity, faBook } from '@fortawesome/free-solid-svg-icons';
+import { faCode, faMoon, faSun, faChevronDown, faBolt, faPlusSquare, faHeart, faUniversity, faBook, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin, faGithubAlt, faGitlab, faNpm, faMedium } from '@fortawesome/free-brands-svg-icons';
 import { IntlProvider } from 'react-intl';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { flattenMessages } from './helpers/flattenMessages';
 import supportedLanguages from './helpers/supportedLanguages';
 import Header from './layout/Header';
 import Home from './pages/Home';
-import Portfolio from './pages/Portfolio';
+// import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 import Footer from './layout/Footer';
 import GlobalStyle from './layout/GlobalStyle';
 import Profile from './pages/Profile';
 
-library.add(faCode, faMoon, faSun, faChevronDown, faBolt, faPlusSquare, faHeart, faUniversity, faBook)
+library.add(faCode, faMoon, faSun, faChevronDown, faBolt, faPlusSquare, faHeart, faUniversity, faBook, faEnvelope, faLinkedin, faGithubAlt, faGitlab, faNpm, faMedium)
 
 const AppContainer = styled.div`
   text-align: center;
@@ -34,9 +35,9 @@ const App = (props) => {
           <Route path="/perfil">
             <Profile setLanguage={props.setLanguage} switchTheme={props.switchTheme} />
           </Route>
-          <Route path="/portfolio">
+          {/* <Route path="/portfolio">
             <Portfolio setLanguage={props.setLanguage} switchTheme={props.switchTheme} />
-          </Route>
+          </Route> */}
           <Route path="/contato">
             <Contact setLanguage={props.setLanguage} switchTheme={props.switchTheme} />
           </Route>
@@ -58,7 +59,7 @@ const IntlApp = () => {
   useEffect(() => {
     
     const language = navigator.language;
-    const th = 'main';
+    const th = 'dark';
     let locale = supportedLanguages[language] || 'pt';
 
     fetch(`/lang/${locale}.json`).then(async messages => {

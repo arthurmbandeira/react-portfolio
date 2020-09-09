@@ -38,7 +38,6 @@ const University = styled.div`
   color: ${props => props.theme.gray1};
   font-family: ${props => props.theme.ffMontserrat};
   font-size: 15px;
-  /* font-weight: bold; */
   margin: 10px 0 0;
   svg.fa-lg {
     margin-right: 8px;

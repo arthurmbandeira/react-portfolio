@@ -4,7 +4,7 @@ import Row from "./layout/Row";
 import Col from "./layout/Col";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { injectIntl } from "react-intl";
-import BoltLink from "./BoltLink";
+// import BoltLink from "./BoltLink";
 
 const PortfolioRowStyled = styled.div`
   margin: 5px 0 20px;

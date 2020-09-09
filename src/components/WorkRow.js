@@ -42,24 +42,24 @@ const MoreButton = styled.button`
   display: none;
 `;
 
-const WorkRow = (props) => {
+const WorkRow = ({ title, start, end, company, switchTheme, isDarkMode, setDarkMode, companyUrl }) => {
   return (
     <WorkRowStyled>
       <Row classes="justify-content-between align-items-center">
         <Col classes="d-flex align-items-center">
-          <Title>{props.title}</Title>
+          <Title>{title}</Title>
           <MoreButton>
             <FontAwesomeIcon icon="plus-square"/>
           </MoreButton>
         </Col>
         <Col classes="w-auto">
-          <Title>{props.start} - {props.end ? props.end : <BoltLink switchTheme={props.switchTheme} isDarkMode={props.isDarkMode} setDarkMode={props.setDarkMode} />}</Title>
+          <Title>{start} - {end ? end : <BoltLink switchTheme={switchTheme} isDarkMode={isDarkMode} setDarkMode={setDarkMode} />}</Title>
         </Col>
       </Row>
       <Row>
         <Col>
-          <Company href={props.companyUrl} target="_blank" rel="noopener noreferrer">
-              {props.company}
+          <Company href={companyUrl} target="_blank" rel="noopener noreferrer">
+              {company}
           </Company>
         </Col>
       </Row>

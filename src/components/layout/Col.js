@@ -15,11 +15,10 @@ const ColStyle = styled.div`
   align-items: ${props => props.flex.alignItems};
 `;
 
-const Col = (props) => {
-  const { justifyContent, alignItems } = props;  
+const Col = ({ justifyContent, alignItems, classes, children }) => {
   return (
-    <ColStyle className={props.classes} flex={{ justifyContent, alignItems }}>
-      {props.children}
+    <ColStyle className={classes} flex={{ justifyContent, alignItems }}>
+      {children}
     </ColStyle>
   );
 }

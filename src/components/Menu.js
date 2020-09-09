@@ -31,8 +31,8 @@ const Menu = (props) => {
     <MenuStyled>
       {/* <MoreLink /> */}
       <LinkStyled to="/perfil"><FormattedMessage id="menu-profile" /></LinkStyled>
-      <LinkStyled to="/portfolio"><FormattedMessage id="menu-portfolio" /></LinkStyled>
-      <LinkStyled to="/contato"><FormattedMessage id="menu-contact" /></LinkStyled>
+      {/* <LinkStyled to="/portfolio"><FormattedMessage id="menu-portfolio" /></LinkStyled> */}
+      <LinkStyled to="/contato"><FormattedMessage id="contact.title" /></LinkStyled>
       <LanguageLink setLanguage={props.setLanguage} />
       <ThemeLink switchTheme={props.switchTheme} />
     </MenuStyled>

@@ -18,7 +18,7 @@ const SquareBoxStyle = styled.div`
     font-size: 14px;
     line-height: 1.4;
     white-space: pre-line;
-    margin: 5px auto;
+    margin: 0 auto 10px;
   }
 `;
 
