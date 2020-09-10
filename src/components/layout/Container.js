@@ -13,6 +13,28 @@ const ContainerStyle = styled.div`
   &.full {
     max-width: 100%;
   }
+  @media(max-width: 900px) {
+    &,
+    &.small,
+    &.full {
+      max-width: 720px;
+    }
+  }
+  @media(max-width: 767px) {
+    &,
+    &.small,
+    &.full {
+      max-width: 100%;
+      padding: 0 30px;
+    }
+  }
+  @media(max-width: 575px) {
+    &,
+    &.small,
+    &.full {
+      padding: 0 15px;
+    }
+  }
 `;
 
 const Container = (props) => {

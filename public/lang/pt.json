@@ -1,12 +1,15 @@
 {
     "menu-portfolio": "Portfólio",
     "menu-articles": "Artigos",
-    "menu-profile": "Perfil",
     "dark-mode": "Modo Escuro",
     "light-mode": "Modo Claro",
     "experiences": "Experiências",
     "made-with": "Feito com",
     "hello": "Oi",
+    "profile": {
+        "title": "Perfil",
+        "text": "Informações sobre minha educação, experiências profissionais, estágios e projetos de graduação."
+    },
     "work": {
         "name": "Trabalho",
         "contents": {

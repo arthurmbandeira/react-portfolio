@@ -33,6 +33,9 @@ const HeaderContent = styled.div`
   border-bottom: 1px solid ${props => props.theme.gray2};
   padding: 10px 0;
   margin-bottom: 20px;
+  @media (max-width: 575px) {
+    flex-wrap: wrap;
+  }
 `;
 
 const Header = (props) => {

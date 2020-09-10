@@ -14,12 +14,18 @@ const ProfilePicStyle = styled.div`
     object-fit: cover;
     object-position: center -15px;
   }
+  @media (max-width: 767px) {
+    height: ${props => props.heightMd};
+  }
+  @media (max-width: 575px) {
+    display: none;
+  }
 `;
 
-const ProfilePic = (props) => {
+const ProfilePic = ({ size, pic, heightMd }) => {
   return (
-    <ProfilePicStyle size={props.size}>
-      <img className="img-fluid" src={props.pic} alt="Hey!"/>
+    <ProfilePicStyle size={size} heightMd={heightMd}>
+      <img className="img-fluid" src={pic} alt="Hey!"/>
     </ProfilePicStyle>
   );
 }

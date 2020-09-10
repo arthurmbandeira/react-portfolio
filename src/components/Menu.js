@@ -13,6 +13,15 @@ const MenuStyled = styled.nav`
     font-size: 16px;
     color: ${props => props.theme.gray1};
   }
+  @media (max-width: 575px) {
+    margin-top: 10px;
+    justify-content: space-between;
+    width: 100%;
+    & > a:last-of-type {
+      flex-grow: 1;
+      text-align: right;
+    }
+  }
 `;
 
 const LinkStyled = styled(Link)`
@@ -24,13 +33,18 @@ const LinkStyled = styled(Link)`
   &:first-of-type {
     text-decoration: none;
   }
+  @media (max-width: 575px) {
+    &:first-of-type {
+      margin-left: 0;
+    }
+  }
 `;
 
 const Menu = (props) => {
   return (
     <MenuStyled>
       {/* <MoreLink /> */}
-      <LinkStyled to="/perfil"><FormattedMessage id="menu-profile" /></LinkStyled>
+      <LinkStyled to="/perfil"><FormattedMessage id="profile.title" /></LinkStyled>
       {/* <LinkStyled to="/portfolio"><FormattedMessage id="menu-portfolio" /></LinkStyled> */}
       <LinkStyled to="/contato"><FormattedMessage id="contact.title" /></LinkStyled>
       <LanguageLink setLanguage={props.setLanguage} />

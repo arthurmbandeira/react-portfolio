@@ -7,13 +7,17 @@ const RowStyle = styled.div`
   margin-right: -15px;
   align-items: ${props => props.flex.alignItems};
   justify-content: ${props => props.flex.justifyContent};
+  @media(max-width: 575px) {
+    margin-left: 0;
+    margin-right: 0;
+    flex-wrap: wrap;
+  }
 `;
 
-const Row = (props) => {
-  const { justifyContent, alignItems } = props;
+const Row = ({ justifyContent, alignItems, classes, children }) => {
   return (
-    <RowStyle className={props.classes} flex={{ justifyContent, alignItems }}>
-      {props.children}
+    <RowStyle className={classes} flex={{ justifyContent, alignItems }}>
+      {children}
     </RowStyle>
   );
 }

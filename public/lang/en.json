@@ -1,12 +1,19 @@
 {
     "menu-portfolio": "Portfolio",
     "menu-articles": "Articles",
-    "menu-profile": "Profile",
     "dark-mode": "Dark Mode",
     "light-mode": "Light Mode",
     "experiences": "Experiences",
     "made-with": "Made with",
     "hello": "Hi",
+    "profile": {
+        "title": "Profile",
+        "text": "Information describing my education, professional experiences, internships and college projects."
+    },
+    "contact": {
+        "title": "Contact",
+        "text": "Information about contact, repositories, projects and articles."
+    },
     "work": {
         "name": "Work",
         "contents": {
@@ -46,7 +53,7 @@
         "contents": {
             "coderun": {
                 "role": "Developer",
-                "company": "Fortalecimento da competitividade das micro e pequenas empresas através do uso das Tecnologias de Informação e Comunicação",
+                "company": "Strengthening the competitiveness of micro and small enterprises through Information and Communications Technology",
                 "url": " ",
                 "start": "2015",
                 "end": "2016",
@@ -58,7 +65,7 @@
                 "url": " ",
                 "start": "2012",
                 "end": "2015",
-                "description": "Projeto desenvolvido na State University of Maringá, visando a inclusão digital da terceira idade."
+                "description": "Project developed at State University of Maring a, aiming the digital literacy of the elderly community."
             }
         }
     },
@@ -67,25 +74,21 @@
         "name": "Education",
         "contents": {
             "masters": {
-                "title": "MSc Computer Science",
+                "title": "MSc. Computer Science",
                 "university": "State University of Maringá",
-                "work": "Segmentação de Objetos em Sequências de Imagens por Segmentação Hierárquica e Análise de Texturas",
-                "assignment": "Dissertação",
+                "work": "Object Segmentation in Image Sequences by Hierarchical Segmentation and Texture Analysis",
+                "assignment": "Master’s Thesi",
                 "start": "2018",
                 "end": ""
             },
             "graduation": {
-                "title": "BSc Computer Science",
+                "title": "BSc. Computer Science",
                 "university": "State University of Maringá",
-                "work": "Segmentação de Imagens por Morfologia Matemática e Colônia de Formigas Artificiais",
-                "assignment": "Trabalho de Conclusão de Curso",
+                "work": "Image Segmentation by Mathematical Morphology and Ant Colony Optimization",
+                "assignment": "Final Course Assignment",
                 "start": "2011",
                 "end": "2017"
             }
         }
-    },
-    "contact": {
-        "title": "Contact",
-        "text": "Information about contact, repositories, projects and articles."
     }
 }

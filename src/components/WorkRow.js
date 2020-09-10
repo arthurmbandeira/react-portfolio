@@ -20,6 +20,10 @@ const Title = styled.h3`
   font-family: ${props => props.theme.ffAnonymous};
   font-size: 20px;
   text-align: left;
+  @media (max-width: 575px) {
+    font-size: 18px;
+    margin-left: ${props => props.mlXs};
+  }
 `;
 
 const Company = styled.a`
@@ -42,18 +46,20 @@ const MoreButton = styled.button`
   display: none;
 `;
 
+const alignItems = 'flex-start';
+
 const WorkRow = ({ title, start, end, company, switchTheme, isDarkMode, setDarkMode, companyUrl }) => {
   return (
     <WorkRowStyled>
-      <Row classes="justify-content-between align-items-center">
-        <Col classes="d-flex align-items-center">
+      <Row classes="justify-content-between" flex={alignItems}>
+        <Col classes="d-flex" flex={alignItems}>
           <Title>{title}</Title>
           <MoreButton>
             <FontAwesomeIcon icon="plus-square"/>
           </MoreButton>
         </Col>
         <Col classes="w-auto">
-          <Title>{start} - {end ? end : <BoltLink switchTheme={switchTheme} isDarkMode={isDarkMode} setDarkMode={setDarkMode} />}</Title>
+          <Title mlXs="10px">{start} - {end ? end : <BoltLink switchTheme={switchTheme} isDarkMode={isDarkMode} setDarkMode={setDarkMode} />}</Title>
         </Col>
       </Row>
       <Row>

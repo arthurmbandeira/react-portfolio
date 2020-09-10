@@ -6,6 +6,9 @@ import { injectIntl } from "react-intl";
 const ContactBoxStyled = styled.div`
   width: 150px;
   margin: 0 auto 15px;
+  @media (max-width: 575px) {
+    width: 100px;
+  }
 `;
 
 const Box = styled.div`
@@ -17,6 +20,9 @@ const Box = styled.div`
   &:hover {
     border: 1px solid ${props => props.theme.gray1};
   }
+  @media (max-width: 575px) {
+    padding: 15px 5px;
+  }
 `;
 
 const Title = styled.h3`
@@ -25,6 +31,9 @@ const Title = styled.h3`
   color: ${props => props.theme.gray1};
   font-family: ${props => props.theme.ffAnonymous};
   font-size: 20px;
+  @media (max-width: 575px) {
+    font-size: 18px;
+  }
 `;
 
 const ContactBox = ({ title, icon, url }) => {

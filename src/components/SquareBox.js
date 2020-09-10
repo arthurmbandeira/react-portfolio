@@ -20,12 +20,20 @@ const SquareBoxStyle = styled.div`
     white-space: pre-line;
     margin: 0 auto 10px;
   }
+  @media (max-width: 767px) {
+    height: ${props => props.heightMd};
+    padding: 15px;
+  }
+  @media (max-width: 575px) {
+    height: auto;
+    padding: 15px;
+  }
 `;
 
-const SquareBox = (props) => {
+const SquareBox = ({ children, height, heightMd }) => {
   return (
-    <SquareBoxStyle height={props.height}>
-      {props.children}
+    <SquareBoxStyle height={height} heightMd={heightMd}>
+      {children}
     </SquareBoxStyle>
   );
 }

@@ -2,13 +2,10 @@ import React from "react";
 import { injectIntl } from "react-intl";
 import styled from "styled-components";
 import Container from "../layout/Container";
-import Row from "../layout/Row";
-import Col from "../layout/Col";
 import Main from "../layout/Main";
 import SectionTitle from "../SectionTitle";
 import SectionSubtitle from "../SectionSubtitle";
 import SquareBox from "../SquareBox";
-import ProfilePic from "../ProfilePic";
 import EducationRow from "../EducationRow";
 import WorkRow from "../WorkRow";
 
@@ -16,24 +13,14 @@ const ProfileStyle = styled(Main)`
   font-family: ${props => props.theme.ffMontserrat};
 `;
 
-const Profile = (props) => {
-  const { intl } = props;
-  const about = intl.formatMessage({id: 'about'}).split(/(?:\r\n|\r|\n)/g);
-  const me = 'img/me.jpeg';
+const Profile = ({ intl, switchTheme, setDarkMode, isDarkMode }) => {
   return (
     <ProfileStyle>
       <Container small>
-        <Row>
-          <Col>
-            <SquareBox height="200px">
-              <h2>{intl.formatMessage({id: 'hello'})}</h2>
-              {about.map((line, key) => <p key={key}>{line}</p>)}
-            </SquareBox>
-          </Col>
-          <Col classes="w-auto">
-            <ProfilePic pic={me} size="200px" />
-          </Col>
-        </Row>
+        <SectionTitle title={intl.formatMessage({id: 'profile.title'})} />
+        <SquareBox>
+          {intl.formatMessage({id: 'profile.text'})}
+        </SquareBox>
         <SectionTitle title={intl.formatMessage({id: 'education.name'})} />
 
         <EducationRow title={intl.formatMessage({id: 'education.contents.masters.title'})} 
@@ -42,7 +29,7 @@ const Profile = (props) => {
                       assignment={intl.formatMessage({id: 'education.contents.masters.assignment'})} 
                       start={intl.formatMessage({id: 'education.contents.masters.start'})} 
                       end={''} 
-                      switchTheme={props.switchTheme} />
+                      switchTheme={switchTheme} />
 
         <EducationRow title={intl.formatMessage({id: 'education.contents.graduation.title'})} 
                       university={intl.formatMessage({id: 'education.contents.graduation.university'})} 
@@ -50,7 +37,7 @@ const Profile = (props) => {
                       assignment={intl.formatMessage({id: 'education.contents.graduation.assignment'})} 
                       start={intl.formatMessage({id: 'education.contents.graduation.start'})} 
                       end={intl.formatMessage({id: 'education.contents.graduation.end'})} 
-                      switchTheme={props.switchTheme} />
+                      switchTheme={switchTheme} />
 
         <SectionTitle title={intl.formatMessage({id: 'experiences'})} />
         
@@ -61,9 +48,9 @@ const Profile = (props) => {
                  companyUrl={intl.formatMessage({id: 'work.contents.objective.url'})}
                  start={intl.formatMessage({id: 'work.contents.objective.start'})}
                  description={intl.formatMessage({id: 'work.contents.objective.description'})}
-                 switchTheme={props.switchTheme}
-                 isDarkMode={props.isDarkMode}
-                 setDarkMode={props.setDarkMode} />
+                 switchTheme={switchTheme}
+                 isDarkMode={isDarkMode}
+                 setDarkMode={setDarkMode} />
 
         <WorkRow title={intl.formatMessage({id: 'work.contents.escada.role'})}
                  company={intl.formatMessage({id: 'work.contents.escada.company'})}
@@ -71,7 +58,7 @@ const Profile = (props) => {
                  start={intl.formatMessage({id: 'work.contents.escada.start'})}
                  end={intl.formatMessage({id: 'work.contents.escada.end'})}
                  description={intl.formatMessage({id: 'work.contents.escada.description'})}
-                 switchTheme={props.switchTheme} />
+                 switchTheme={switchTheme} />
 
         <SectionSubtitle title={intl.formatMessage({id: 'internship.name'})} />
 
@@ -81,7 +68,7 @@ const Profile = (props) => {
                  start={intl.formatMessage({id: 'internship.contents.coderun.start'})}
                  end={intl.formatMessage({id: 'internship.contents.coderun.end'})}
                  description={intl.formatMessage({id: 'internship.contents.coderun.description'})}
-                 switchTheme={props.switchTheme} />
+                 switchTheme={switchTheme} />
 
         <SectionSubtitle title={intl.formatMessage({id: 'college-projects.name'})} />
 
@@ -91,7 +78,7 @@ const Profile = (props) => {
                  start={intl.formatMessage({id: 'college-projects.contents.coderun.start'})}
                  end={intl.formatMessage({id: 'college-projects.contents.coderun.end'})}
                  description={intl.formatMessage({id: 'college-projects.contents.coderun.description'})}
-                 switchTheme={props.switchTheme} />
+                 switchTheme={switchTheme} />
 
         <WorkRow title={intl.formatMessage({id: 'college-projects.contents.mudi.role'})}
                  company={intl.formatMessage({id: 'college-projects.contents.mudi.company'})}
@@ -99,7 +86,7 @@ const Profile = (props) => {
                  start={intl.formatMessage({id: 'college-projects.contents.mudi.start'})}
                  end={intl.formatMessage({id: 'college-projects.contents.mudi.end'})}
                  description={intl.formatMessage({id: 'college-projects.contents.mudi.description'})}
-                 switchTheme={props.switchTheme} />
+                 switchTheme={switchTheme} />
       </Container>
     </ProfileStyle>
   );

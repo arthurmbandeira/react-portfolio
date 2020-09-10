@@ -1,12 +1,94 @@
 {
     "menu-portfolio": "Portefeuille",
     "menu-articles": "Articles",
-    "menu-profile": "Profil",
     "dark-mode": "Mode Sombre",
     "light-mode": "Mode Clair",
     "hello": "Salut",
+    "experiences": "Expériences",
+    "made-with": "Fait avec",
+    "profile": {
+        "title": "Profil",
+        "text": "Informations sur mes études, mes expériences professionnelles, mes stages professionnels et mes projets de collège."
+    },
     "contact": {
         "title": "Contact",
         "text": "Informations de contact, dêpóts, projets et articles."
+    },
+    "work": {
+        "name": "Emploi",
+        "contents": {
+            "objective": {
+                "role": "Développeur",
+                "company": "Objective Solutions",
+                "url": "https://objective.com.br",
+                "start": "2019",
+                "end": "",
+                "description": " "
+            },
+            "escada": {
+                "role": "Développeur",
+                "company": "Escada Digital",
+                "url": "https://escadadigital.com.br",
+                "start": "2017",
+                "end": "2019",
+                "description": " "
+            }
+        }
+    },
+    "internship": {
+        "name": "Stage Professionnel",
+        "contents": {
+            "coderun": {
+                "role": "Développeur Full-Stack",
+                "company": "Coderun",
+                "url": "https://coderun.com.br",
+                "start": "2015",
+                "end": "2017",
+                "description": " "
+            }
+        }
+    },
+    "college-projects": {
+        "name": "Projets de Collège",
+        "contents": {
+            "coderun": {
+                "role": "Développeur",
+                "company": "Renforcement de la compétitivité des micro et petites entreprises grâce aux technologies del’information et de la communication",
+                "url": " ",
+                "start": "2015",
+                "end": "2016",
+                "description": " "
+            },
+            "mudi": {
+                "role": "Monitor",
+                "company": "Alphabétisation Numérique",
+                "url": " ",
+                "start": "2012",
+                "end": "2015",
+                "description": "Projet développé à l’Université d’État de Maringá, visant l’alphabétisation numérique des personnes âgées."
+            }
+        }
+    },
+    "about": "Je suis Arthur et je travaille comme Développeur Web.\nJe suis diplômé de l'Université d'État de Maringá en Informatique et, en ce moment, je prends un diplôme de maîtrise dans les domaines de l'intelligence computationnelle et du traitement d'image.\n",
+    "education": {
+        "name": "Éducation",
+        "contents": {
+            "masters": {
+                "title": "Maîtrise en Informatique",
+                "university": "Université d’État de Maringá",
+                "work": "Segmentation d'Objets dans des Séquences d'Images par Segmentation Hiérarchique et Analyse de Texture",
+                "assignment": "Mémoire de maîtrise",
+                "start": "2018",
+                "end": ""
+            },
+            "graduation": {
+                "title": "Baccalauréat en Informatique",
+                "university": "Université d’État de Maringá",
+                "work": "Segmentation d’images par morphologie mathemátiqueet algorithme de colonies de fourmis",
+                "assignment": "Travail de conclusion de cours",
+                "start": "2011",
+                "end": "2017"
+            }
+        }
     }
 }

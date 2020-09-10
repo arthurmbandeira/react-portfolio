@@ -38,20 +38,19 @@ const contacts = [
 ];
 
 const Home = ({ intl, switchTheme, isDarkMode, setDarkMode }) => {
-  // const { intl } = props;
   const about = intl.formatMessage({id: 'about'}).split(/(?:\r\n|\r|\n)/g);
   return (
     <HomeStyle>
       <Container small>
         <Row>
           <Col>
-            <SquareBox height="200px">
+            <SquareBox height="200px" heightMd="245px">
               <h2>{intl.formatMessage({id: 'hello'})}</h2>
               {about.map((line, key) => <p key={key}>{line}</p>)}
             </SquareBox>
           </Col>
-          <Col classes="w-auto">
-            <ProfilePic pic={me} size="200px" />
+          <Col classes="w-auto w-xs-100">
+            <ProfilePic pic={me} size="200px" heightMd="245px" />
           </Col>
         </Row>
         <SectionTitle title={intl.formatMessage({id: 'experiences'})} />

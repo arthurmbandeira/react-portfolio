@@ -13,6 +13,12 @@ const ColStyle = styled.div`
   display: block;
   justify-content: ${props => props.flex.justifyContent};
   align-items: ${props => props.flex.alignItems};
+  @media(max-width: 575px) {
+    padding-left: 0;
+    padding-right: 0;
+    /* flex-basis: 100%; */
+    align-items: flex-start;
+  }
 `;
 
 const Col = ({ justifyContent, alignItems, classes, children }) => {

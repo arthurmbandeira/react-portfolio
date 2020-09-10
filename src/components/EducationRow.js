@@ -20,6 +20,10 @@ const Title = styled.h3`
   font-family: ${props => props.theme.ffAnonymous};
   font-size: 20px;
   text-align: left;
+  @media (max-width: 575px) {
+    font-size: 18px;
+    margin-left: ${props => props.mlXs};
+  }
 `;
 
 const Work = styled.div`
@@ -44,16 +48,15 @@ const University = styled.div`
     width: 20px;
   }
 `;
-
 const EducationRow = (props) => {
   return (
     <EducationRowStyled>
-      <Row classes="justify-content-between align-items-center">
-        <Col classes="d-flex align-items-center">
+      <Row classes="justify-content-between">
+        <Col classes="d-flex">
           <Title>{props.title}</Title>
         </Col>
         <Col classes="w-auto">
-          <Title>{props.start} - {props.end ? props.end : <BoltLink switchTheme={props.switchTheme} isDarkMode={props.isDarkMode} setDarkMode={props.setDarkMode} />}</Title>
+          <Title mlXs="10px">{props.start} - {props.end ? props.end : <BoltLink switchTheme={props.switchTheme} isDarkMode={props.isDarkMode} setDarkMode={props.setDarkMode} />}</Title>
         </Col>
       </Row>
       <Row>
