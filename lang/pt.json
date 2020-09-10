@@ -1,8 +1,94 @@
 {
-    "menu-contact": "Contato",
     "menu-portfolio": "Portfólio",
     "menu-articles": "Artigos",
-    "menu-profile": "Perfil",
     "dark-mode": "Modo Escuro",
-    "light-mode": "Modo Claro"
+    "light-mode": "Modo Claro",
+    "experiences": "Experiências",
+    "made-with": "Feito com",
+    "hello": "Oi",
+    "profile": {
+        "title": "Perfil",
+        "text": "Informações sobre minha educação, experiências profissionais, estágios e projetos de graduação."
+    },
+    "work": {
+        "name": "Trabalho",
+        "contents": {
+            "objective": {
+                "role": "Desenvolvedor",
+                "company": "Objective Solutions",
+                "url": "https://objective.com.br",
+                "start": "2019",
+                "end": "",
+                "description": " "
+            },
+            "escada": {
+                "role": "Desenvolvedor",
+                "company": "Escada Digital",
+                "url": "https://escadadigital.com.br",
+                "start": "2017",
+                "end": "2019",
+                "description": " "
+            }
+        }
+    },
+    "internship": {
+        "name": "Estágio Profissional",
+        "contents": {
+            "coderun": {
+                "role": "Desenvolvedor Full-Stack",
+                "company": "Coderun",
+                "url": "https://coderun.com.br",
+                "start": "2015",
+                "end": "2017",
+                "description": " "
+            }
+        }
+    },
+    "college-projects": {
+        "name": "Projetos de Graduação",
+        "contents": {
+            "coderun": {
+                "role": "Desenvolvedor",
+                "company": "Fortalecimento da competitividade das micro e pequenas empresas através do uso das Tecnologias de Informação e Comunicação",
+                "url": " ",
+                "start": "2015",
+                "end": "2016",
+                "description": " "
+            },
+            "mudi": {
+                "role": "Monitor",
+                "company": "Inclusão Digital",
+                "url": " ",
+                "start": "2012",
+                "end": "2015",
+                "description": "Projeto desenvolvido na Universidade Estadual de Maringá, visando a inclusão digital da terceira idade."
+            }
+        }
+    },
+    "about": "Sou o Arthur e trabalho como Desenvolvedor Web.\nSou graduado pela Universidade Estadual de Maringá em Ciência da Computação e, no momento, curso Mestrado nas áreas de Inteligência Computacional e Processamento de Imagens.\n",
+    "education": {
+        "name": "Educação",
+        "contents": {
+            "masters": {
+                "title": "Mestrado em Ciência da Computação",
+                "university": "Universidade Estadual de Maringá",
+                "work": "Segmentação de Objetos em Sequências de Imagens por Segmentação Hierárquica e Análise de Texturas",
+                "assignment": "Dissertação",
+                "start": "2018",
+                "end": ""
+            },
+            "graduation": {
+                "title": "Bacharelado em Ciência da Computação",
+                "university": "Universidade Estadual de Maringá",
+                "work": "Segmentação de Imagens por Morfologia Matemática e Colônia de Formigas Artificiais",
+                "assignment": "Trabalho de Conclusão de Curso",
+                "start": "2011",
+                "end": "2017"
+            }
+        }
+    },
+    "contact": {
+        "title": "Contato",
+        "text": "Informações de contato, repositórios, projetos e artigos."
+    }
 }

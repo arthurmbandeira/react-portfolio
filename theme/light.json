@@ -3,5 +3,6 @@
     "ffMontserrat": "'Montserrat', sans-serif;",
     "bg": "#fff",
     "gray1": "#404040",
-    "gray2": "#828282"
+    "gray2": "#828282",
+    "gray3": "#dddddd"
 }
