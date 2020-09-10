@@ -1,0 +1,94 @@
+{
+    "menu-portfolio": "Portfolio",
+    "menu-articles": "Articles",
+    "dark-mode": "Dark Mode",
+    "light-mode": "Light Mode",
+    "experiences": "Experiences",
+    "made-with": "Made with",
+    "hello": "Hi",
+    "profile": {
+        "title": "Profile",
+        "text": "Information describing my education, professional experiences, internships and college projects."
+    },
+    "contact": {
+        "title": "Contact",
+        "text": "Information about contact, repositories, projects and articles."
+    },
+    "work": {
+        "name": "Work",
+        "contents": {
+            "objective": {
+                "role": "Developer",
+                "company": "Objective Solutions",
+                "url": "https://objective.com.br",
+                "start": "2019",
+                "end": "",
+                "description": " "
+            },
+            "escada": {
+                "role": "Developer",
+                "company": "Escada Digital",
+                "url": "https://escadadigital.com.br",
+                "start": "2017",
+                "end": "2019",
+                "description": " "
+            }
+        }
+    },
+    "internship": {
+        "name": "Professional Internship",
+        "contents": {
+            "coderun": {
+                "role": "Full-Stack Developer",
+                "company": "Coderun",
+                "url": "https://coderun.com.br",
+                "start": "2015",
+                "end": "2017",
+                "description": " "
+            }
+        }
+    },
+    "college-projects": {
+        "name": "College Projects",
+        "contents": {
+            "coderun": {
+                "role": "Developer",
+                "company": "Strengthening the competitiveness of micro and small enterprises through Information and Communications Technology",
+                "url": " ",
+                "start": "2015",
+                "end": "2016",
+                "description": " "
+            },
+            "mudi": {
+                "role": "Monitor",
+                "company": "Digital Literacy",
+                "url": " ",
+                "start": "2012",
+                "end": "2015",
+                "description": "Project developed at State University of Maring a, aiming the digital literacy of the elderly community."
+            }
+        }
+    },
+    "about": "I'm Arthur and I work as Web Developer.\nI have a bachelor in Computer Science at State University of Maringá and, currently, I'm working on my Master's Degree in Computational Intelligence and Image Processing.\n",
+    "education": {
+        "name": "Education",
+        "contents": {
+            "masters": {
+                "title": "MSc. Computer Science",
+                "university": "State University of Maringá",
+                "work": "Object Segmentation in Image Sequences by Hierarchical Segmentation and Texture Analysis",
+                "assignment": "Master’s Thesi",
+                "start": "2018",
+                "end": ""
+            },
+            "graduation": {
+                "title": "BSc. Computer Science",
+                "university": "State University of Maringá",
+                "work": "Image Segmentation by Mathematical Morphology and Ant Colony Optimization",
+                "assignment": "Final Course Assignment",
+                "start": "2011",
+                "end": "2017"
+            }
+        }
+    }
+}
