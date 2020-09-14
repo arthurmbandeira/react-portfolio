@@ -9,6 +9,10 @@ const LANGUAGES = {
     en: {
         urlLang: 'en',
         code: 'en-US'
+    },
+    fr: {
+        urlLang: 'fr',
+        code: 'fr'
     }
 }
 

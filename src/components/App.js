@@ -7,6 +7,8 @@ import { IntlProvider } from 'react-intl';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { flattenMessages } from './helpers/flattenMessages';
 import supportedLanguages from './helpers/supportedLanguages';
+import GA from "./helpers/googleAnalytics";
+
 import Header from './layout/Header';
 import Home from './pages/Home';
 // import Portfolio from './pages/Portfolio';
@@ -14,6 +16,7 @@ import Contact from './pages/Contact';
 import Footer from './layout/Footer';
 import GlobalStyle from './layout/GlobalStyle';
 import Profile from './pages/Profile';
+
 
 library.add(faCode, faMoon, faSun, faChevronDown, faBolt, faPlusSquare, faHeart, faUniversity, faBook, faEnvelope, faLinkedin, faGithubAlt, faGitlab, faNpm, faMedium)
 
@@ -25,24 +28,24 @@ const AppContainer = styled.div`
   justify-content: space-between;
 `;
 
-const App = (props) => {
+const App = ({ theme, setLanguage, switchTheme }) => {
   return (
-    <ThemeProvider theme={props.theme}>
+    <ThemeProvider theme={theme}>
       <AppContainer>
         <GlobalStyle />
-        <Header setLanguage={props.setLanguage} switchTheme={props.switchTheme} />
+        <Header setLanguage={setLanguage} switchTheme={switchTheme} />
         <Switch>
           <Route path="/perfil">
-            <Profile setLanguage={props.setLanguage} switchTheme={props.switchTheme} />
+            <Profile setLanguage={setLanguage} switchTheme={switchTheme} />
           </Route>
           {/* <Route path="/portfolio">
-            <Portfolio setLanguage={props.setLanguage} switchTheme={props.switchTheme} />
+            <Portfolio setLanguage={setLanguage} switchTheme={switchTheme} />
           </Route> */}
           <Route path="/contato">
-            <Contact setLanguage={props.setLanguage} switchTheme={props.switchTheme} />
+            <Contact setLanguage={setLanguage} switchTheme={switchTheme} />
           </Route>
           <Route path="/">
-            <Home setLanguage={props.setLanguage} switchTheme={props.switchTheme} />
+            <Home setLanguage={setLanguage} switchTheme={switchTheme} />
           </Route>
         </Switch>
         <Footer />
@@ -90,6 +93,7 @@ const IntlApp = () => {
   return (
     <IntlProvider locale={locale} messages={flattenMessages(messages)}>
       <BrowserRouter>
+        { GA.init() && <GA.RouteTracker /> }
         <App setLanguage={setLanguage} theme={theme} switchTheme={switchTheme} />
       </BrowserRouter>
     </IntlProvider>

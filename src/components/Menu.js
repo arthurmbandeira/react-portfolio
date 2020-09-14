@@ -30,9 +30,6 @@ const LinkStyled = styled(Link)`
   &:hover {
     text-decoration: underline;
   } 
-  &:first-of-type {
-    text-decoration: none;
-  }
   @media (max-width: 575px) {
     &:first-of-type {
       margin-left: 0;
