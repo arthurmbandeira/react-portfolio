@@ -13,6 +13,7 @@ const ProfilePicStyle = styled.div`
   img {
     object-fit: cover;
     object-position: center -15px;
+    width: 100%;
   }
   @media (max-width: 767px) {
     height: ${props => props.heightMd};
@@ -25,7 +26,7 @@ const ProfilePicStyle = styled.div`
 const ProfilePic = ({ size, pic, heightMd }) => {
   return (
     <ProfilePicStyle size={size} heightMd={heightMd}>
-      <img className="img-fluid" src={pic} alt="Hey!"/>
+      <img src={pic} alt="Hey!"/>
     </ProfilePicStyle>
   );
 }

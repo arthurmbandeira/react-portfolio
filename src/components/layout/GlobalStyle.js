@@ -33,10 +33,7 @@ const GlobalStyle = createGlobalStyle`
   .align-items-center {
     align-items: center;
   }
-  .img-fluid {
-    max-width: 100%;
-    height: auto;
-  }
+  
   @media(max-width: 575px) {
     .w-xs-100 {
       width: 100%;
