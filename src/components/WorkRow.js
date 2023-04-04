@@ -29,7 +29,7 @@ const Title = styled.h3`
 const Company = styled.a`
   color: ${props => props.theme.gray1};
   font-family: ${props => props.theme.ffMontserrat};
-  font-size: 15px;
+  font-size: 16px;
   margin: 0;
 `;
 
@@ -48,29 +48,30 @@ const MoreButton = styled.button`
 
 const alignItems = 'flex-start';
 
-const WorkRow = ({ title, start, end, company, switchTheme, isDarkMode, setDarkMode, companyUrl }) => {
-  return (
-    <WorkRowStyled>
-      <Row classes="justify-content-between" flex={alignItems}>
-        <Col classes="d-flex" flex={alignItems}>
-          <Title>{title}</Title>
-          <MoreButton>
-            <FontAwesomeIcon icon="plus-square"/>
-          </MoreButton>
-        </Col>
-        <Col classes="w-auto">
-          <Title mlXs="10px">{start} - {end ? end : <BoltLink switchTheme={switchTheme} isDarkMode={isDarkMode} setDarkMode={setDarkMode} />}</Title>
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <Company href={companyUrl} target="_blank" rel="noopener noreferrer">
-              {company}
-          </Company>
-        </Col>
-      </Row>
-    </WorkRowStyled>
-  );
-}
+const WorkRow = ({ title, start, end, company, switchTheme, isDarkMode, setDarkMode, companyUrl }) => (
+  <WorkRowStyled>
+    <Row classes="justify-content-between" flex={alignItems}>
+      <Col classes="d-flex" flex={alignItems}>
+        <Title>{title}</Title>
+        <MoreButton>
+          <FontAwesomeIcon icon="plus-square" />
+        </MoreButton>
+      </Col>
+      <Col classes="w-auto">
+        <Title mlXs="10px">
+          {start} - {end ? end : <BoltLink switchTheme={switchTheme} isDarkMode={isDarkMode} setDarkMode={setDarkMode} />}
+        </Title>
+      </Col>
+    </Row>
+    <Row>
+      <Col>
+        <Company href={companyUrl} target="_blank" rel="noopener noreferrer">
+          {company}
+        </Company>
+      </Col>
+    </Row>
+  </WorkRowStyled>
+);
+
 
 export default injectIntl(WorkRow);

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Switch, Route, Redirect } from 'react-router-dom'
+import { Routes, Route, Redirect } from 'react-router-dom'
 
 const LANGUAGES = {
     pt: {
@@ -31,12 +31,12 @@ const MultiLanguageRoute = (props) => {
 
 export const Routes = () => {
     return (
-        <Switch>
+        <Routes>
             <MultiLanguageRoute exact path="/"/>
             <MultiLanguageRoute exact path="/:lang" component={Home}/>
             <MultiLanguageRoute exact path="/:lang/posts" component={Posts}/>
             <MultiLanguageRoute exact path="/:lang/posts/:id" component={Post}/>
             <MultiLanguageRoute path="*" component={Page404}/>
-        </Switch>
+        </Routes>
     )
 }

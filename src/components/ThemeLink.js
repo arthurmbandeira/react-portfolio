@@ -20,7 +20,7 @@ const ThemeLink = (props) => {
 
   const { intl } = props;
   return (
-    <LinkStyled onClick={handleClick} title={isDarkMode ? intl.formatMessage({ id: 'dark-mode' }) : intl.formatMessage({ id: 'light-mode' })}>
+    <LinkStyled onClick={handleClick} title={isDarkMode ? intl.formatMessage({ id: 'dark_mode' }) : intl.formatMessage({ id: 'light_mode' })}>
       <FontAwesomeIcon icon={isDarkMode ? 'moon' : 'sun'} />
     </LinkStyled>
   )

@@ -29,7 +29,7 @@ const Footer = (props) => {
       <Container small>
         <FooterContent>
           <p>
-            {intl.formatMessage({id: 'made-with'})}&nbsp;
+            {intl.formatMessage({id: 'made_with'})}&nbsp;
             <FontAwesomeIcon icon="heart" />
           </p>
         </FooterContent>

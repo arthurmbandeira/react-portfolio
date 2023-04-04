@@ -18,7 +18,7 @@ const Portfolio = (props) => {
   return (
     <PortfolioStyle>
       <Container small>
-        <SectionTitle title={intl.formatMessage({id: 'menu-portfolio'})} />
+        <SectionTitle title={intl.formatMessage({id: 'menu_portfolio'})} />
         <SquareBox>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga assumenda velit quam dolor ab deleniti autem non, repellat obcaecati reiciendis, iusto totam esse doloremque illum, veritatis expedita adipisci consectetur molestiae?
         </SquareBox>

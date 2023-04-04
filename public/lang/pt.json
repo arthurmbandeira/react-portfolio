@@ -1,10 +1,10 @@
 {
-    "menu-portfolio": "Portfólio",
-    "menu-articles": "Artigos",
-    "dark-mode": "Modo Escuro",
-    "light-mode": "Modo Claro",
+    "menu_portfolio": "Portfólio",
+    "menu_articles": "Artigos",
+    "dark_mode": "Modo Escuro",
+    "light_mode": "Modo Claro",
     "experiences": "Experiências",
-    "made-with": "Feito com",
+    "made_with": "Feito com",
     "hello": "Oi",
     "profile": {
         "title": "Perfil",
@@ -13,18 +13,50 @@
     "work": {
         "name": "Trabalho",
         "contents": {
+            "tech5": {
+                "role": "Desenvolvedor Front-end",
+                "company": "Tech5",
+                "url": "https://tech5-sa.com",
+                "start": "2023",
+                "end": "",
+                "description": " "
+            },
+            "redit": {
+                "role": "Consultor",
+                "company": "RedIt",
+                "url": "https://redit.pt",
+                "start": "2023",
+                "end": "",
+                "description": " "
+            },
+            "multivision": {
+                "role": "Consultor",
+                "company": "Multivision",
+                "url": "https://multivision.pt",
+                "start": "2021",
+                "end": "2023",
+                "description": " "
+            },
+            "millennium": {
+                "role": "Desenvolvedor Front-end",
+                "company": "Millennium BCP",
+                "url": "http://millenniumbcp.pt",
+                "start": "2021",
+                "end": "2022",
+                "description": " "
+            },
             "objective": {
                 "role": "Desenvolvedor",
                 "company": "Objective Solutions",
                 "url": "https://objective.com.br",
                 "start": "2019",
-                "end": "",
+                "end": "2021",
                 "description": " "
             },
             "escada": {
                 "role": "Desenvolvedor",
-                "company": "Escada Digital",
-                "url": "https://escadadigital.com.br",
+                "company": "Eskda",
+                "url": "https://eskda.com.br/",
                 "start": "2017",
                 "end": "2019",
                 "description": " "
@@ -44,7 +76,7 @@
             }
         }
     },
-    "college-projects": {
+    "college_projects": {
         "name": "Projetos de Graduação",
         "contents": {
             "coderun": {

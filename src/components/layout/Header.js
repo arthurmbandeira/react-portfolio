@@ -38,7 +38,10 @@ const HeaderContent = styled.div`
   }
 `;
 
-const Header = (props) => {
+const Header = ({ intl, ...props }) => {
+  const { messages: {
+    profile, contact
+  } } = intl;
   return (
     <HeaderStyle>
       <Container small>
@@ -49,7 +52,12 @@ const Header = (props) => {
               <h1>Arthur Bandeira</h1>
             </SiteTitle>
           </Link>
-          <Menu switchTheme={props.switchTheme} setLanguage={props.setLanguage} />
+          <Menu 
+            profileTitle={profile.title} 
+            contactTitle={contact.title} 
+            switchTheme={props.switchTheme} 
+            setLanguage={props.setLanguage}
+          />
         </HeaderContent>
       </Container>
     </HeaderStyle>

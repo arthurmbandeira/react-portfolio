@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { injectIntl } from "react-intl";
 import styled from "styled-components";
 import Container from "../layout/Container";
@@ -38,14 +38,15 @@ const contacts = [
 ];
 
 const Home = ({ intl, switchTheme, isDarkMode, setDarkMode }) => {
-  const about = intl.formatMessage({id: 'about'}).split(/(?:\r\n|\r|\n)/g);
-  return (
+  const about = intl.formatMessage({ id: 'about' }).split(/(?:\r\n|\r|\n)/g);
+  const { messages } = intl;
+  return useMemo(() => (
     <HomeStyle>
       <Container small>
         <Row>
           <Col>
             <SquareBox height="200px" heightMd="245px">
-              <h2>{intl.formatMessage({id: 'hello'})}</h2>
+              <h2>{intl.formatMessage({ id: 'hello' })}</h2>
               {about.map((line, key) => <p key={key}>{line}</p>)}
             </SquareBox>
           </Col>
@@ -53,45 +54,47 @@ const Home = ({ intl, switchTheme, isDarkMode, setDarkMode }) => {
             <ProfilePic pic={me} size="200px" heightMd="245px" />
           </Col>
         </Row>
-        <SectionTitle title={intl.formatMessage({id: 'experiences'})} />
-        
-        <SectionSubtitle title={intl.formatMessage({id: 'work.name'})} />
-        
-        <WorkRow title={intl.formatMessage({id: 'work.contents.objective.role'})}
-                 company={intl.formatMessage({id: 'work.contents.objective.company'})}
-                 companyUrl={intl.formatMessage({id: 'work.contents.objective.url'})}
-                 start={intl.formatMessage({id: 'work.contents.objective.start'})}
-                 description={intl.formatMessage({id: 'work.contents.objective.description'})}
-                 switchTheme={switchTheme}
-                 isDarkMode={isDarkMode}
-                 setDarkMode={setDarkMode} />
+        <SectionTitle title={intl.formatMessage({ id: 'experiences' })} />
 
-        <WorkRow title={intl.formatMessage({id: 'work.contents.escada.role'})}
-                 company={intl.formatMessage({id: 'work.contents.escada.company'})}
-                 companyUrl={intl.formatMessage({id: 'work.contents.escada.url'})}
-                 start={intl.formatMessage({id: 'work.contents.escada.start'})}
-                 end={intl.formatMessage({id: 'work.contents.escada.end'})}
-                 description={intl.formatMessage({id: 'work.contents.escada.description'})}
-                 switchTheme={switchTheme} />
+        <SectionSubtitle title={intl.formatMessage({ id: messages.work.name })} />
 
-        <SectionSubtitle title={intl.formatMessage({id: 'internship.name'})} />
+        {
+          Object.values(messages.work.contents).map(
+            (work) => <WorkRow key={work.company} title={intl.formatMessage({ id: work.role })}
+              company={intl.formatMessage({ id: work.company })}
+              companyUrl={intl.formatMessage({ id: work.url })}
+              start={intl.formatMessage({ id: work.start })}
+              end={work.end && intl.formatMessage({ id: work.end })}
+              description={intl.formatMessage({ id: work.description })}
+              switchTheme={switchTheme}
+              isDarkMode={isDarkMode}
+              setDarkMode={setDarkMode} />
+          )
+        }
 
-        <WorkRow title={intl.formatMessage({id: 'internship.contents.coderun.role'})}
-                 company={intl.formatMessage({id: 'internship.contents.coderun.company'})}
-                 companyUrl={intl.formatMessage({id: 'internship.contents.coderun.url'})}
-                 start={intl.formatMessage({id: 'internship.contents.coderun.start'})}
-                 end={intl.formatMessage({id: 'internship.contents.coderun.end'})}
-                 description={intl.formatMessage({id: 'internship.contents.coderun.description'})}
-                 switchTheme={switchTheme} />
+        <SectionSubtitle title={intl.formatMessage({ id: messages.internship.name })} />
 
-        <SectionTitle title={intl.formatMessage({id: 'contact.title'})} />
+        {
+          Object.values(messages.internship.contents).map(
+            (internship) => <WorkRow key={internship.company} title={intl.formatMessage({ id: internship.role })}
+              company={intl.formatMessage({ id: internship.company })}
+              companyUrl={intl.formatMessage({ id: internship.url })}
+              start={intl.formatMessage({ id: internship.start })}
+              end={internship.end ? intl.formatMessage({ id: internship.end }) : ''}
+              description={intl.formatMessage({ id: internship.description })}
+              switchTheme={switchTheme}
+              isDarkMode={isDarkMode}
+              setDarkMode={setDarkMode} />
+          )
+        }
+
+        <SectionTitle title={intl.formatMessage({ id: messages.contact.title })} />
 
         <BoxContainer>
-          {contacts.map((item, key) => <ContactBox key={key} title={item.title} url={item.url} icon={item.icon} /> )}
+          {contacts.map((item, key) => <ContactBox key={key} title={item.title} url={item.url} icon={item.icon} />)}
         </BoxContainer>
       </Container>
-    </HomeStyle>
-  );
+    </HomeStyle>), [messages]);
 }
 
 export default injectIntl(Home);
