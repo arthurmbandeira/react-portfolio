@@ -12,26 +12,50 @@
     },
     "contact": {
         "title": "Contact",
-        "text": "Information about contact, repositories, projects and articles."
+        "text": "Contact information, social media links, my repositories, projects and articles."
     },
     "work": {
         "name": "Work",
         "contents": {
+            "hitachi": {
+                "role": "Front-end Developer",
+                "company": "Hitachi Rail",
+                "url": "https://www.hitachirail.com",
+                "start": "2024",
+                "end": "",
+                "description": "Developed reusable and scalable Web Components using StencilJS, TypeScript and Redux for railway systems. Implemented unit testing and coverage using Jest and ensured code quality through SonarQube. Maintained CI/CD pipelines with Jenkins. Collaborated in cross-functional Agile teams using Scrum and Jira."
+            },
+            "randstad": {
+                "role": "Consultant",
+                "company": "Randstad Digital Portugal",
+                "url": "https://www.randstaddigital.pt",
+                "start": "2024",
+                "end": "",
+                "description": "Consulting and development of advanced front-end solutions for clients across various industries, including railway systems. Specialization in modern web component architecture, design pattern implementation and quality assurance through automated testing and code analysis."
+            },
+            "pluxee": {
+                "role": "Developer",
+                "company": "Pluxee Portugal",
+                "url": "https://www.pluxee.pt",
+                "start": "2023",
+                "end": "2024",
+                "description": "Developed and maintained web applications using HTML, CSS, JavaScript, PHP, Laravel and MySQL. Participated in end-to-end feature delivery, from requirements analysis to production deployment. Worked within Agile Scrum teams using Jira for project tracking and delivery."
+            },
             "tech5": {
                 "role": "Front-end Developer",
                 "company": "Tech5",
                 "url": "https://tech5-sa.com",
                 "start": "2023",
                 "end": "",
-                "description": " "
+                "description": "Developed full-stack applications using Angular, TypeScript, C#, PostgreSQL and Docker. Implemented and integrated secure authentication and authorization flows. Built and maintained CI/CD pipelines using Jenkins, supporting continuous delivery. Produced and maintained technical documentation using VuePress. Worked in Scrum-based Agile teams."
             },
             "redit": {
                 "role": "Consultant",
                 "company": "RedIt",
                 "url": "https://redit.pt",
                 "start": "2023",
-                "end": "",
-                "description": " "
+                "end": "2024",
+                "description": "Developed and maintained web applications using HTML, CSS, JavaScript, PHP, Laravel and MySQL. Participated in end-to-end feature delivery, from requirements analysis to production deployment. Worked collaboratively in Agile Scrum teams using Jira for project tracking and delivery."
             },
             "multivision": {
                 "role": "Consultant",
@@ -39,7 +63,7 @@
                 "url": "https://multivision.pt",
                 "start": "2021",
                 "end": "2023",
-                "description": " "
+                "description": "Designed and developed a company-wide Design System and reusable component library using React, React Native and TypeScript. Delivered mobile modules integrated into the bank's core application. Ensured consistency, performance and scalability across multiple applications. Collaborated using Agile methodologies with Azure DevOps."
             },
             "millennium": {
                 "role": "Front-end Developer",
@@ -47,7 +71,7 @@
                 "url": "http://millenniumbcp.pt",
                 "start": "2021",
                 "end": "2022",
-                "description": " "
+                "description": "Designed and developed a company-wide Design System and reusable component library using React, React Native and TypeScript. Delivered mobile modules integrated into the bank's core application. Ensured consistency, performance and scalability across multiple applications. Collaborated using Agile methodologies with Azure DevOps."
             },
             "objective": {
                 "role": "Developer",
@@ -55,7 +79,7 @@
                 "url": "https://objective.com.br",
                 "start": "2019",
                 "end": "2021",
-                "description": " "
+                "description": "Developed and maintained enterprise portals using Liferay 6.2, 7.2 and 7.3. Built applications using React, TypeScript, Java and Liferay DXP. Managed cloud environments on Liferay DXP Cloud. Led project and team coordination activities within Scrum and Agile frameworks."
             },
             "escada": {
                 "role": "Developer",
@@ -63,7 +87,7 @@
                 "url": "https://eskda.com.br/",
                 "start": "2017",
                 "end": "2019",
-                "description": " "
+                "description": "Developed a BI system for digital marketing analytics using Node.js, AngularJS and MongoDB. Built and maintained applications with PHP, Laravel, MySQL and WordPress plugins. Delivered websites and e-commerce integrations; managed servers and deployments."
             }
         }
     },
@@ -76,11 +100,11 @@
                 "url": "https://coderun.com.br",
                 "start": "2015",
                 "end": "2017",
-                "description": " "
+                "description": "Developed websites, landing pages and hybrid applications using HTML, CSS, JavaScript, Bootstrap, SASS, PHP, Laravel, MySQL, WordPress and AngularJS. Worked with Scrum and Kanban methodologies using Jira for project management."
             }
         }
     },
-    "college_projects": {
+    "college-projects": {
         "name": "College Projects",
         "contents": {
             "coderun": {
@@ -101,7 +125,7 @@
             }
         }
     },
-    "about": "I'm Arthur and I work as Web Developer.\nI have a bachelor in Computer Science at State University of Maringá and, currently, I'm working on my Master's Degree in Computational Intelligence and Image Processing.\n",
+    "about": "I'm a Senior Front-End Developer based in Lisbon, Portugal. Bachelor's and Master's degree in Computer Science from State University of Maringá. Specialized in developing scalable web systems, reusable components and modern front-end applications using the latest technologies and software engineering practices.\n",
     "education": {
         "name": "Education",
         "contents": {

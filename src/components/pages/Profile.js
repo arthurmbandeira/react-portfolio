@@ -87,23 +87,21 @@ const Profile = ({ intl, switchTheme, setDarkMode, isDarkMode }) => {
           )
         }
 
-        <SectionSubtitle title={intl.formatMessage({ id: messages.college_projects.name })} />
+        <SectionSubtitle title={intl.formatMessage({ id: messages['college-projects'].name })} />
 
-        <WorkRow title={intl.formatMessage({ id: 'college-projects.contents.coderun.role' })}
-          company={intl.formatMessage({ id: 'college-projects.contents.coderun.company' })}
-          companyUrl={intl.formatMessage({ id: 'college-projects.contents.coderun.url' })}
-          start={intl.formatMessage({ id: 'college-projects.contents.coderun.start' })}
-          end={intl.formatMessage({ id: 'college-projects.contents.coderun.end' })}
-          description={intl.formatMessage({ id: 'college-projects.contents.coderun.description' })}
-          switchTheme={switchTheme} />
-
-        <WorkRow title={intl.formatMessage({ id: 'college-projects.contents.mudi.role' })}
-          company={intl.formatMessage({ id: 'college-projects.contents.mudi.company' })}
-          companyUrl={intl.formatMessage({ id: 'college-projects.contents.mudi.url' })}
-          start={intl.formatMessage({ id: 'college-projects.contents.mudi.start' })}
-          end={intl.formatMessage({ id: 'college-projects.contents.mudi.end' })}
-          description={intl.formatMessage({ id: 'college-projects.contents.mudi.description' })}
-          switchTheme={switchTheme} />
+        {
+          Object.values(messages['college-projects'].contents).map(
+            (collegeProject) => <WorkRow key={collegeProject.company} title={intl.formatMessage({ id: collegeProject.role })}
+              company={intl.formatMessage({ id: collegeProject.company })}
+              companyUrl={intl.formatMessage({ id: collegeProject.url })}
+              start={intl.formatMessage({ id: collegeProject.start })}
+              end={collegeProject.end ? intl.formatMessage({ id: collegeProject.end }) : ''}
+              description={intl.formatMessage({ id: collegeProject.description })}
+              switchTheme={switchTheme}
+              isDarkMode={isDarkMode}
+              setDarkMode={setDarkMode} />
+          )
+        }
       </Container>
     </ProfileStyle>
   );

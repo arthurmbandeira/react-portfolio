@@ -47,12 +47,13 @@ const contacts = [
 
 const Contact = (props) => {
   const { intl } = props;
+  const { messages } = intl;
   return (
     <ContactStyle>
       <Container small>
-        <SectionTitle title={intl.formatMessage({id: 'contact.title'})} />
+        <SectionTitle title={intl.formatMessage({id: messages.contact.title})} />
         <SquareBox>
-          {intl.formatMessage({id: 'contact.text'})}
+          {intl.formatMessage({id: messages.contact.text})}
         </SquareBox>
         <BoxContainer>
           {contacts.map((item, key) => <ContactBox key={key} title={item.title} url={item.url} icon={item.icon} theme={props.theme} /> )}

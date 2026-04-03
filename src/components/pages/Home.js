@@ -50,9 +50,6 @@ const Home = ({ intl, switchTheme, isDarkMode, setDarkMode }) => {
               {about.map((line, key) => <p key={key}>{line}</p>)}
             </SquareBox>
           </Col>
-          <Col classes="w-auto w-xs-100">
-            <ProfilePic pic={me} size="200px" heightMd="245px" />
-          </Col>
         </Row>
         <SectionTitle title={intl.formatMessage({ id: 'experiences' })} />
 
