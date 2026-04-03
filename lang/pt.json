@@ -1,33 +1,93 @@
 {
-    "menu-portfolio": "Portfólio",
-    "menu-articles": "Artigos",
-    "dark-mode": "Modo Escuro",
-    "light-mode": "Modo Claro",
+    "menu_portfolio": "Portfólio",
+    "menu_articles": "Artigos",
+    "dark_mode": "Modo Escuro",
+    "light_mode": "Modo Claro",
     "experiences": "Experiências",
-    "made-with": "Feito com",
+    "made_with": "Feito com",
     "hello": "Oi",
     "profile": {
         "title": "Perfil",
         "text": "Informações sobre minha educação, experiências profissionais, estágios e projetos de graduação."
     },
+    "contact": {
+        "title": "Contato",
+        "text": "Informações de contato, links para redes sociais, meus repositórios, projetos e artigos."
+    },
     "work": {
         "name": "Trabalho",
         "contents": {
+            "hitachi": {
+                "role": "Desenvolvedor Front-end",
+                "company": "Hitachi Rail",
+                "url": "https://www.hitachirail.com",
+                "start": "2024",
+                "end": "",
+                "description": "Desenvolvimento de Web Components reutilizáveis e escaláveis usando StencilJS, TypeScript e Redux para sistemas ferroviários. Implementação de testes unitários com Jest e garantia de qualidade de código através do SonarQube. Manutenção de pipelines CI/CD com Jenkins. Colaboração em equipes ágeis cross-funcionais."
+            },
+            "randstad": {
+                "role": "Consultor",
+                "company": "Randstad Digital Portugal",
+                "url": "https://www.randstaddigital.pt",
+                "start": "2024",
+                "end": "",
+                "description": "Consultoria e desenvolvimento de soluções front-end avançadas para clientes em diversos setores, incluindo sistemas ferroviários. Especialização em arquitetura de componentes web modernos, implementação de padrões de design e garantia de qualidade através de testes automatizados e análise de código."
+            },
+            "pluxee": {
+                "role": "Desenvolvedor",
+                "company": "Pluxee Portugal",
+                "url": "https://www.pluxee.pt",
+                "start": "2023",
+                "end": "2024",
+                "description": "Desenvolvimento e manutenção de aplicações web utilizando HTML, CSS, JavaScript, PHP, Laravel e MySQL. Participação na entrega de funcionalidades de ponta a ponta, desde análise de requisitos até implantação em produção. Trabalho em equipes Agile Scrum com gestão de projetos via Jira."
+            },
+            "tech5": {
+                "role": "Desenvolvedor Front-end",
+                "company": "Tech5",
+                "url": "https://tech5-sa.com",
+                "start": "2023",
+                "end": "2023",
+                "description": "Desenvolvimento full-stack utilizando Angular, TypeScript, C#, PostgreSQL e Docker. Implementação e integração de fluxos de autenticação e autorização segura. Construção e manutenção de pipelines CI/CD com Jenkins. Documentação técnica com VuePress. Trabalho em equipes Scrum-based com Jira."
+            },
+            "redit": {
+                "role": "Consultor",
+                "company": "RedIt",
+                "url": "https://redit.pt",
+                "start": "2023",
+                "end": "2024",
+                "description": "Desenvolvimento e manutenção de aplicações web utilizando HTML, CSS, JavaScript, PHP, Laravel e MySQL. Participação na entrega end-to-end de funcionalidades, da análise de requisitos até implantação em produção. Trabalho colaborativo em equipes Agile Scrum com Jira para rastreamento de projetos."
+            },
+            "multivision": {
+                "role": "Consultor",
+                "company": "Multivision",
+                "url": "https://multivision.pt",
+                "start": "2021",
+                "end": "2023",
+                "description": "Design e desenvolvimento de Design System e biblioteca de componentes reutilizáveis utilizando React, React Native e TypeScript. Entrega de módulos móveis integrados na aplicação core do banco. Garantia de consistência, performance e escalabilidade entre múltiplas aplicações. Colaboração com metodologias Agile e Azure DevOps."
+            },
+            "millennium": {
+                "role": "Desenvolvedor Front-end",
+                "company": "Millennium BCP",
+                "url": "http://millenniumbcp.pt",
+                "start": "2021",
+                "end": "2022",
+                "description": "Design e desenvolvimento de Design System e biblioteca de componentes reutilizáveis usando React, React Native e TypeScript. Entrega de módulos móveis integrados na aplicação core do banco. Garantia de consistência, performance e escalabilidade entre múltiplas aplicações. Trabalho colaborativo com metodologias Agile e Azure DevOps."
+            },
             "objective": {
                 "role": "Desenvolvedor",
                 "company": "Objective Solutions",
                 "url": "https://objective.com.br",
                 "start": "2019",
-                "end": "",
-                "description": " "
+                "end": "2021",
+                "description": "Desenvolvimento e manutenção de portais empresariais utilizando Liferay 6.2, 7.2 e 7.3. Construção de aplicações com React, TypeScript, Java e Liferay DXP. Gerenciamento de ambientes cloud em Liferay DXP Cloud. Liderança de coordenação de projetos e equipes em frameworks Scrum e Agile."
             },
             "escada": {
                 "role": "Desenvolvedor",
-                "company": "Escada Digital",
-                "url": "https://escadadigital.com.br",
+                "company": "Eskda",
+                "url": "https://eskda.com.br/",
                 "start": "2017",
                 "end": "2019",
-                "description": " "
+                "description": "Desenvolvimento de sistema BI para análise de marketing digital utilizando Node.js, AngularJS e MongoDB. Construção e manutenção de aplicações com PHP, Laravel, MySQL e plugins WordPress. Entrega de websites e integrações de e-commerce. Gerenciamento de servidores e deployments."
             }
         }
     },
@@ -40,7 +100,7 @@
                 "url": "https://coderun.com.br",
                 "start": "2015",
                 "end": "2017",
-                "description": " "
+                "description": "Desenvolvimento de websites, landing pages e aplicações híbridas utilizando HTML, CSS, JavaScript, Bootstrap, SASS, PHP, Laravel, MySQL, WordPress e AngularJS. Trabalho com metodologias Scrum e Kanban usando Jira para gestão de projetos."
             }
         }
     },
@@ -65,7 +125,7 @@
             }
         }
     },
-    "about": "Sou o Arthur e trabalho como Desenvolvedor Web.\nSou graduado pela Universidade Estadual de Maringá em Ciência da Computação e, no momento, curso Mestrado nas áreas de Inteligência Computacional e Processamento de Imagens.\n",
+    "about": "Sou Desenvolvedor Senior Front-End baseado em Lisboa, Portugal. Graduado e Mestre em Ciência da Computação pela Universidade Estadual de Maringá. Especializado no desenvolvimento de sistemas web escaláveis, componentes reutilizáveis e aplicações front-end modernas, utilizando as mais recentes tecnologias e práticas de engenharia de software.\n",
     "education": {
         "name": "Educação",
         "contents": {
@@ -86,9 +146,5 @@
                 "end": "2017"
             }
         }
-    },
-    "contact": {
-        "title": "Contato",
-        "text": "Informações de contato, repositórios, projetos e artigos."
     }
 }
