@@ -9,11 +9,8 @@ import BoxContainer from "../layout/BoxContainer";
 import SectionTitle from "../SectionTitle";
 import WorkRow from "../WorkRow";
 import SectionSubtitle from "../SectionSubtitle";
-import ProfilePic from "../ProfilePic";
 import SquareBox from "../SquareBox";
 import ContactBox from "../ContactBox";
-
-const me = 'img/me.jpeg';
 
 const HomeStyle = styled(Main)`
   font-family: ${props => props.theme.ffMontserrat};
@@ -37,7 +34,7 @@ const contacts = [
   }
 ];
 
-const Home = ({ intl, switchTheme, isDarkMode, setDarkMode }) => {
+const Home = ({ intl, switchTheme }) => {
   const about = intl.formatMessage({ id: 'about' }).split(/(?:\r\n|\r|\n)/g);
   const { messages } = intl;
   return useMemo(() => (
@@ -63,9 +60,7 @@ const Home = ({ intl, switchTheme, isDarkMode, setDarkMode }) => {
               start={work.start}
               end={work.end}
               description={work.description}
-              switchTheme={switchTheme}
-              isDarkMode={isDarkMode}
-              setDarkMode={setDarkMode} />
+              switchTheme={switchTheme} />
           )
         }
 
@@ -79,9 +74,7 @@ const Home = ({ intl, switchTheme, isDarkMode, setDarkMode }) => {
               start={internship.start}
               end={internship.end}
               description={internship.description}
-              switchTheme={switchTheme}
-              isDarkMode={isDarkMode}
-              setDarkMode={setDarkMode} />
+              switchTheme={switchTheme} />
           )
         }
 

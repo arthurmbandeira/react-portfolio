@@ -7,7 +7,6 @@ import { IntlProvider } from 'react-intl';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { flattenMessages } from './helpers/flattenMessages';
 import supportedLanguages from './helpers/supportedLanguages';
-import GA from "./helpers/googleAnalytics";
 
 import Header from './layout/Header';
 import Home from './pages/Home';
@@ -37,7 +36,7 @@ const App = ({ theme, setLanguage, switchTheme }) => {
         <Routes>
           <Route path="/perfil" element={<Profile setLanguage={setLanguage} switchTheme={switchTheme} />} />
           <Route path="/contato" element={<Contact setLanguage={setLanguage} switchTheme={switchTheme} />} />
-          <Route path="/" element={<Home setLanguage={setLanguage} switchTheme={switchTheme} />} />
+          <Route path="/" element={<Home switchTheme={switchTheme} />} />
         </Routes>
         <Footer />
       </AppContainer>
@@ -110,7 +109,6 @@ const IntlApp = () => {
       throw err;
     }}>
       <BrowserRouter basename={process.env.PUBLIC_URL || "/"}>
-        {GA.init() && <GA.RouteTracker />}
         <App setLanguage={setLanguage} theme={theme} switchTheme={switchTheme} />
       </BrowserRouter>
     </IntlProvider>

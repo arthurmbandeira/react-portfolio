@@ -132,10 +132,10 @@
             "masters": {
                 "title": "Maîtrise en Informatique",
                 "university": "Université d’État de Maringá",
-                "work": "Segmentation d'Objets dans des Séquences d'Images par Segmentation Hiérarchique et Analyse de Texture",
+                "work": "Segmentation Assistée d'Objets dans des Séquences d'Images par Segmentation Morphologique Hiérarchique et Appariement de Motifs de Texture",
                 "assignment": "Mémoire de maîtrise",
                 "start": "2018",
-                "end": ""
+                "end": "2021"
             },
             "graduation": {
                 "title": "Baccalauréat en Informatique",

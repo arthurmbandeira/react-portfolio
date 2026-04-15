@@ -132,10 +132,10 @@
             "masters": {
                 "title": "Mestrado em Ciência da Computação",
                 "university": "Universidade Estadual de Maringá",
-                "work": "Segmentação de Objetos em Sequências de Imagens por Segmentação Hierárquica e Análise de Texturas",
+                "work": "Segmentação Assistida de Objetos em Sequências de Imagens por Segmentação Morfológica Hierárquica e Casamento de Padrões de Textura",
                 "assignment": "Dissertação",
                 "start": "2018",
-                "end": ""
+                "end": "2021"
             },
             "graduation": {
                 "title": "Bacharelado em Ciência da Computação",
