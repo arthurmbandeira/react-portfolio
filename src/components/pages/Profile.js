@@ -27,12 +27,12 @@ const Profile = ({ intl, switchTheme, setDarkMode, isDarkMode }) => {
 
 
         {Object.values(messages.education.contents).map((education) => (
-          <EducationRow title={intl.formatMessage({ id: education.title })}
-            university={intl.formatMessage({ id: education.university })}
-            work={intl.formatMessage({ id: education.work })}
-            assignment={intl.formatMessage({ id: education.assignment })}
-            start={intl.formatMessage({ id: education.start })}
-            end={education.end && intl.formatMessage({ id: education.end })}
+          <EducationRow title={education.title}
+            university={education.university}
+            work={education.work}
+            assignment={education.assignment}
+            start={education.start}
+            end={education.end}
             switchTheme={switchTheme} />
         ))}
 
@@ -42,12 +42,12 @@ const Profile = ({ intl, switchTheme, setDarkMode, isDarkMode }) => {
 
         {
           Object.values(messages.work.contents).map(
-            (work) => <WorkRow key={work.company} title={intl.formatMessage({ id: work.role })}
-              company={intl.formatMessage({ id: work.company })}
-              companyUrl={intl.formatMessage({ id: work.url })}
-              start={intl.formatMessage({ id: work.start })}
-              end={work.end && intl.formatMessage({ id: work.end })}
-              description={intl.formatMessage({ id: work.description })}
+            (work) => <WorkRow key={work.company} title={work.role}
+              company={work.company}
+              companyUrl={work.url}
+              start={work.start}
+              end={work.end}
+              description={work.description}
               switchTheme={switchTheme}
               isDarkMode={isDarkMode}
               setDarkMode={setDarkMode} />
@@ -75,12 +75,12 @@ const Profile = ({ intl, switchTheme, setDarkMode, isDarkMode }) => {
 
         {
           Object.values(messages.internship.contents).map(
-            (internship) => <WorkRow key={internship.company} title={intl.formatMessage({ id: internship.role })}
-              company={intl.formatMessage({ id: internship.company })}
-              companyUrl={intl.formatMessage({ id: internship.url })}
-              start={intl.formatMessage({ id: internship.start })}
-              end={internship.end ? intl.formatMessage({ id: internship.end }) : ''}
-              description={intl.formatMessage({ id: internship.description })}
+            (internship) => <WorkRow key={internship.company} title={internship.role}
+              company={internship.company}
+              companyUrl={internship.url}
+              start={internship.start}
+              end={internship.end}
+              description={internship.description}
               switchTheme={switchTheme}
               isDarkMode={isDarkMode}
               setDarkMode={setDarkMode} />
@@ -91,12 +91,12 @@ const Profile = ({ intl, switchTheme, setDarkMode, isDarkMode }) => {
 
         {
           Object.values(messages['college-projects'].contents).map(
-            (collegeProject) => <WorkRow key={collegeProject.company} title={intl.formatMessage({ id: collegeProject.role })}
-              company={intl.formatMessage({ id: collegeProject.company })}
-              companyUrl={intl.formatMessage({ id: collegeProject.url })}
-              start={intl.formatMessage({ id: collegeProject.start })}
-              end={collegeProject.end ? intl.formatMessage({ id: collegeProject.end }) : ''}
-              description={intl.formatMessage({ id: collegeProject.description })}
+            (collegeProject) => <WorkRow key={collegeProject.company} title={collegeProject.role}
+              company={collegeProject.company}
+              companyUrl={collegeProject.url}
+              start={collegeProject.start}
+              end={collegeProject.end}
+              description={collegeProject.description}
               switchTheme={switchTheme}
               isDarkMode={isDarkMode}
               setDarkMode={setDarkMode} />

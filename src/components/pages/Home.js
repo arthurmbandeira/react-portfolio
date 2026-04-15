@@ -57,12 +57,12 @@ const Home = ({ intl, switchTheme, isDarkMode, setDarkMode }) => {
 
         {
           Object.values(messages.work.contents).map(
-            (work) => <WorkRow key={work.company} title={intl.formatMessage({ id: work.role })}
-              company={intl.formatMessage({ id: work.company })}
-              companyUrl={intl.formatMessage({ id: work.url })}
-              start={intl.formatMessage({ id: work.start })}
-              end={work.end && intl.formatMessage({ id: work.end })}
-              description={intl.formatMessage({ id: work.description })}
+            (work) => <WorkRow key={work.company} title={work.role}
+              company={work.company}
+              companyUrl={work.url}
+              start={work.start}
+              end={work.end}
+              description={work.description}
               switchTheme={switchTheme}
               isDarkMode={isDarkMode}
               setDarkMode={setDarkMode} />
@@ -73,12 +73,12 @@ const Home = ({ intl, switchTheme, isDarkMode, setDarkMode }) => {
 
         {
           Object.values(messages.internship.contents).map(
-            (internship) => <WorkRow key={internship.company} title={intl.formatMessage({ id: internship.role })}
-              company={intl.formatMessage({ id: internship.company })}
-              companyUrl={intl.formatMessage({ id: internship.url })}
-              start={intl.formatMessage({ id: internship.start })}
-              end={internship.end ? intl.formatMessage({ id: internship.end }) : ''}
-              description={intl.formatMessage({ id: internship.description })}
+            (internship) => <WorkRow key={internship.company} title={internship.role}
+              company={internship.company}
+              companyUrl={internship.url}
+              start={internship.start}
+              end={internship.end}
+              description={internship.description}
               switchTheme={switchTheme}
               isDarkMode={isDarkMode}
               setDarkMode={setDarkMode} />

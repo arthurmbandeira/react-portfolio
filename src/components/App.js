@@ -56,29 +56,42 @@ const IntlApp = () => {
     const th = 'dark';
     let locale = supportedLanguages[language] || 'pt';
 
-    fetch(`/lang/${locale}.json`).then(async messages => {
+    fetch(`${process.env.PUBLIC_URL}/lang/${locale}.json`).then(async messages => {
       setLocale(locale);
       setMessages(await messages.json());
+    }).catch(err => {
+      console.error('Failed to load language file:', err);
+      // Fallback to Portuguese
+      fetch(`${process.env.PUBLIC_URL}/lang/pt.json`).then(async messages => {
+        setLocale('pt');
+        setMessages(await messages.json());
+      }).catch(err => console.error('Failed to load fallback language:', err));
     });
 
-    fetch(`/theme/${th}.json`).then(async theme => {
+    fetch(`${process.env.PUBLIC_URL}/theme/${th}.json`).then(async theme => {
       setTheme(await theme.json());
-    });
+    }).catch(err => console.error('Failed to load theme:', err));
   }, []);
 
   useEffect(() => {
-    console.log(messages);
-    console.log(flattenMessages(messages));
+    if (messages) {
+      console.log('Messages loaded:', messages);
+      console.log('Flattened messages:', flattenMessages(messages));
+    }
   }, [messages])
 
   const setLanguage = async (locale) => {
-    const messages = await (await fetch(`/lang/${locale}.json`)).json();
-    setLocale(locale);
-    setMessages(messages);
+    try {
+      const messages = await (await fetch(`${process.env.PUBLIC_URL}/lang/${locale}.json`)).json();
+      setLocale(locale);
+      setMessages(messages);
+    } catch (err) {
+      console.error(`Failed to load language ${locale}:`, err);
+    }
   };
 
   const switchTheme = async (th) => {
-    const theme = await (await fetch(`/theme/${th}.json`)).json();
+    const theme = await (await fetch(`${process.env.PUBLIC_URL}/theme/${th}.json`)).json();
     setTheme(theme);
   };
 
@@ -89,7 +102,6 @@ const IntlApp = () => {
   
 
   return (
-    // <IntlProvider locale={locale} messages={flattenMessages(messages)} onError={(err) => {
     <IntlProvider locale={locale} messages={messages} onError={(err) => {
       if (err.code === "MISSING_TRANSLATION") {
         console.warn("Missing translation", err.message);
@@ -97,7 +109,7 @@ const IntlApp = () => {
       }
       throw err;
     }}>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL || "/"}>
         {GA.init() && <GA.RouteTracker />}
         <App setLanguage={setLanguage} theme={theme} switchTheme={switchTheme} />
       </BrowserRouter>
